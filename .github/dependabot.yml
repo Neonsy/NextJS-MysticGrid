@@ -6,8 +6,8 @@ updates:
       labels:
           - 'Dependabot'
           - 'NodeJS'
-      timezone: 'Europe/Berlin'
       schedule:
+          timezone: 'Europe/Berlin'
           interval: 'weekly'
           day: 'monday'
           time: '15:00'
