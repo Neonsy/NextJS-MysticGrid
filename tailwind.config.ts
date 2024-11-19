@@ -10,10 +10,16 @@ export default {
 
     theme: {
         extend: {
+            // textColor: {
+            //     default: 'hsl(var(--color-text) / <alpha-value>)',
+            // },
+            // backgroundColor: {
+            //     header: 'hsl(var(--color-header) / <alpha-value>)',
+            // },
             colors: {
-                background: 'var(--background)',
-                foreground: 'var(--foreground)',
-            },
+                header: 'hsl(var(--color-header) / <alpha-value>)',
+                default: 'hsl(var(--color-text) / <alpha-value>)',
+            }
         },
     },
     plugins: [fluid, require('@tailwindcss/forms')],

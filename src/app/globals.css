@@ -2,16 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    /* Light variables */
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
     :root {
-        /* Dark Variables */
+        --color-header: 222deg 45% 12%;
+        --color-text: 0deg 100% 100%;
     }
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
 }
