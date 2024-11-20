@@ -19,7 +19,9 @@ export default {
             colors: {
                 header: 'hsl(var(--color-header) / <alpha-value>)',
                 default: 'hsl(var(--color-text) / <alpha-value>)',
-            }
+                inverted: 'hsl(var(--color-text-inverted) / <alpha-value>)',
+                primary: 'hsl(var(--color-primary) / <alpha-value>)',
+            },
         },
     },
     plugins: [fluid, require('@tailwindcss/forms')],

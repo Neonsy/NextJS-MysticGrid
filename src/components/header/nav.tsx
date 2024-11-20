@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { LuSun } from 'react-icons/lu';
 import { LuMoon } from 'react-icons/lu';
 
@@ -12,7 +14,9 @@ export default function Nav() {
 
     return (
         <nav className='flex items-center justify-between py-5'>
-            <h1 className='text-default text-5xl'>Mystic Grid</h1>
+            <Link href='/' className='text-5xl text-primary font-bold'>
+                Mystic Grid
+            </Link>
 
             <ul className='flex gap-x-5 text-lg'>
                 {links.map((link) => (
@@ -24,9 +28,9 @@ export default function Nav() {
                 ))}
             </ul>
 
-            <button className='text-3xl bg-header p-2.5 rounded-full'>
+            <button className='rounded-full bg-header p-2.5 text-3xl'>
                 <LuSun className='text-default' />
-                <LuMoon className='text-default hidden' />
+                <LuMoon className='hidden text-default' />
             </button>
         </nav>
     );
