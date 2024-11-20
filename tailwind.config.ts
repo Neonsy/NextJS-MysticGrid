@@ -2,6 +2,7 @@ import type { Config } from 'tailwindcss';
 
 import fluid, { extract } from 'fluid-tailwind';
 import plugin from 'tailwindcss/plugin';
+import Hero from '@/components/pages/home/hero';
 
 export default {
     content: {
@@ -23,6 +24,12 @@ export default {
                 generate: 'hsl(var(--color-generate) / <alpha-value>)',
                 verify: 'hsl(var(--color-verify) / <alpha-value>)',
                 solve: 'hsl(var(--color-solve) / <alpha-value>)',
+            },
+            height: {
+                header: 'var(--header-height)',
+            },
+            minHeight: {
+                hero: 'var(--hero-height)',
             },
         },
     },

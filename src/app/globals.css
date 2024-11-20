@@ -14,5 +14,8 @@
         --color-generate: 350deg 65% 55%;
         --color-verify: 155deg 75% 60%;
         --color-solve: 45deg 75% 60%;
+
+        --header-height: 90px;
+        --hero-height: calc(100dvh - var(--header-height));
     }
 }

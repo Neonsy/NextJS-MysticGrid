@@ -14,7 +14,7 @@ export default function Nav() {
 
     return (
         <nav className='flex items-center justify-between py-5'>
-            <Link href='/' className='text-5xl text-primary font-bold'>
+            <Link href='/' className='text-5xl font-bold text-primary'>
                 Mystic Grid
             </Link>
 
@@ -28,7 +28,7 @@ export default function Nav() {
                 ))}
             </ul>
 
-            <button className='rounded-full bg-header p-2.5 text-3xl'>
+            <button className='rounded-full bg-inverted p-2.5 text-3xl'>
                 <LuSun className='text-default' />
                 <LuMoon className='hidden text-default' />
             </button>
