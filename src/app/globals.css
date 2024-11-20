@@ -7,6 +7,9 @@
         --bg-header: 222deg 45% 12%;
         --bg-features: 240deg 55% 9%;
 
+        --gradient-primary-l: 240deg 75% 9%;
+        --gradient-primary-r: 240deg 50% 18%;
+
         --color-text: 0deg 100% 100%;
         --color-text-inverted: 0deg 100% 0%;
 
@@ -15,7 +18,7 @@
         --color-verify: 155deg 75% 60%;
         --color-solve: 45deg 75% 60%;
 
-        --header-height: 90px;
-        --hero-height: calc(100dvh - var(--header-height));
+        --height-header: 90px;
+        --height-hero: calc(100dvh - var(--height-header));
     }
 }

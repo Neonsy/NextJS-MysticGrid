@@ -12,10 +12,6 @@ export default {
 
     theme: {
         extend: {
-            backgroundColor: {
-                header: 'hsl(var(--bg-header) / <alpha-value>)',
-                features: 'hsl(var(--bg-features) / <alpha-value>)',
-            },
             colors: {
                 default: 'hsl(var(--color-text) / <alpha-value>)',
                 inverted: 'hsl(var(--color-text-inverted) / <alpha-value>)',
@@ -25,11 +21,19 @@ export default {
                 verify: 'hsl(var(--color-verify) / <alpha-value>)',
                 solve: 'hsl(var(--color-solve) / <alpha-value>)',
             },
+            backgroundColor: {
+                header: 'hsl(var(--bg-header) / <alpha-value>)',
+                features: 'hsl(var(--bg-features) / <alpha-value>)',
+            },
+            gradientColorStops: {
+                primaryL: 'hsl(var(--gradient-primary-l) / <alpha-value>)',
+                primaryR: 'hsl(var(--gradient-primary-r) / <alpha-value>)',
+            },
             height: {
-                header: 'var(--header-height)',
+                header: 'var(--height-header)',
             },
             minHeight: {
-                hero: 'var(--hero-height)',
+                hero: 'var(--height-hero)',
             },
         },
     },
