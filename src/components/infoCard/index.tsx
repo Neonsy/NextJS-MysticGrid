@@ -2,7 +2,7 @@ import Icons from '@/components/icons';
 import { IconType } from 'react-icons';
 
 type InfoCardProps = {
-    icon?: IconType;
+    icon: IconType;
     title: string;
     description?: string;
     type?: 'primary' | 'generate' | 'verify' | 'solve';
@@ -34,12 +34,12 @@ export default function InfoCard({ icon, title, description, type = 'primary' }:
 
     return (
         <div className={`${border} relative flex flex-col gap-y-2 rounded-3xl border ${bg ? 'bg-slate-900/50' : ''} px-5 py-9`}>
-            {icon ? <Icons icon={icon} className={`mb-3 text-3xl ${text}`} /> : null}
+            <Icons icon={icon} className={`mb-3 text-3xl ${text}`} />
 
             <p className='text-xl font-bold'>{title}</p>
             <p className='opacity-75'>{description}</p>
 
-            <div className={`info-card-blob $ absolute right-0 top-0 ${bg}`}></div>
+            <div className={`$ info-card-blob absolute right-0 top-0 ${bg}`}></div>
         </div>
     );
 }

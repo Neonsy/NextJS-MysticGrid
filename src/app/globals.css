@@ -17,6 +17,8 @@
         --color-generate: 350deg 65% 55%;
         --color-verify: 155deg 75% 60%;
         --color-solve: 45deg 75% 60%;
+        
+        --color-board-primary: 220deg 90% 36%;
 
         --height-header: 90px;
         --height-hero: calc(100dvh - var(--height-header));

@@ -20,14 +20,16 @@ export default {
                 generate: 'hsl(var(--color-generate) / <alpha-value>)',
                 verify: 'hsl(var(--color-verify) / <alpha-value>)',
                 solve: 'hsl(var(--color-solve) / <alpha-value>)',
+
+                'board-primary': 'hsl(var(--color-board-primary) / <alpha-value>)',
             },
             backgroundColor: {
                 header: 'hsl(var(--bg-header) / <alpha-value>)',
                 features: 'hsl(var(--bg-features) / <alpha-value>)',
             },
             gradientColorStops: {
-                primaryL: 'hsl(var(--gradient-primary-l) / <alpha-value>)',
-                primaryR: 'hsl(var(--gradient-primary-r) / <alpha-value>)',
+                'primary-l': 'hsl(var(--gradient-primary-l) / <alpha-value>)',
+                'primary-r': 'hsl(var(--gradient-primary-r) / <alpha-value>)',
             },
             height: {
                 header: 'var(--height-header)',
@@ -46,6 +48,9 @@ export default {
                     borderRadius: '0 45% 0 100%',
                     width: '50px',
                     height: '50px',
+                },
+                '.board-cell-shadow': {
+                    boxShadow: 'inset 0 0 6px 1px rgba(0, 0, 0, 0.75)',
                 },
             });
         }),
