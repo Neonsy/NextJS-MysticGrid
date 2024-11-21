@@ -7,18 +7,27 @@
         --bg-header: 222deg 45% 12%;
         --bg-features: 240deg 55% 9%;
 
-        --gradient-primary-l: 240deg 75% 9%;
-        --gradient-primary-r: 240deg 50% 18%;
+        --gradient-primary-l: 240deg 49% 19%;
+        --gradient-primary-r: 240deg 54% 9%;
+        --gradient-generate-l: 240deg 28% 16%;
+        --gradient-generate-r: 240deg 50% 20%;
+        --gradient-solve-l: 60deg 20% 20%;
+        --gradient-solve-r: 240deg 26% 11%;
+        --gradient-verify-l: 208deg 20% 15%;
+        --gradient-verify-r: 134deg 26% 20%;
 
         --color-text: 0deg 100% 100%;
         --color-text-inverted: 0deg 100% 0%;
 
         --color-primary: 195deg 100% 55%;
         --color-generate: 350deg 65% 55%;
-        --color-verify: 155deg 75% 60%;
         --color-solve: 45deg 75% 60%;
-        
+        --color-verify: 155deg 75% 60%;
+
         --color-board-primary: 220deg 90% 36%;
+        --color-board-generate: 350deg 75% 30%;
+        --color-board-solve: 45deg 75% 36%;
+        --color-board-verify: 155deg 75% 36%;
 
         --height-header: 90px;
         --height-hero: calc(100dvh - var(--height-header));

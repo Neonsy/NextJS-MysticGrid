@@ -22,6 +22,9 @@ export default {
                 solve: 'hsl(var(--color-solve) / <alpha-value>)',
 
                 'board-primary': 'hsl(var(--color-board-primary) / <alpha-value>)',
+                'board-generate': 'hsl(var(--color-board-generate) / <alpha-value>)',
+                'board-solve': 'hsl(var(--color-board-solve) / <alpha-value>)',
+                'board-verify': 'hsl(var(--color-board-verify) / <alpha-value>)',
             },
             backgroundColor: {
                 header: 'hsl(var(--bg-header) / <alpha-value>)',
@@ -30,6 +33,12 @@ export default {
             gradientColorStops: {
                 'primary-l': 'hsl(var(--gradient-primary-l) / <alpha-value>)',
                 'primary-r': 'hsl(var(--gradient-primary-r) / <alpha-value>)',
+                'generate-l': 'hsl(var(--gradient-generate-l) / <alpha-value>)',
+                'generate-r': 'hsl(var(--gradient-generate-r) / <alpha-value>)',
+                'solve-l': 'hsl(var(--gradient-solve-l) / <alpha-value>)',
+                'solve-r': 'hsl(var(--gradient-solve-r) / <alpha-value>)',
+                'verify-l': 'hsl(var(--gradient-verify-l) / <alpha-value>)',
+                'verify-r': 'hsl(var(--gradient-verify-r) / <alpha-value>)',
             },
             height: {
                 header: 'var(--height-header)',

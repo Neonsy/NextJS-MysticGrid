@@ -6,24 +6,29 @@ import { IconType } from 'react-icons';
 
 type FeatureProps = {
     type: 'play' | 'generate' | 'verify' | 'solve';
+    heading: string;
     description: string;
     cta: string;
     icon: IconType;
     direction?: 'ltr' | 'rtl';
 };
 
-export default function Feature({ type, direction = 'ltr', description, cta, icon }: FeatureProps) {
-    const { heading, gradient, text, cellBg, ctaBg } = {
+export default function Feature({ type, heading, direction = 'ltr', description, cta, icon }: FeatureProps) {
+    const { gradient, text, cellBg, ctaBg } = {
         play: {
-            heading: 'Play the Game',
             text: 'text-primary',
             cellBg: 'bg-board-primary',
             gradient: 'bg-gradient-to-r from-primary-l to-primary-r',
             ctaBg: 'bg-primary',
         },
-        generate: { heading: 'Generate your own Grid' },
-        verify: { heading: 'Verify a Grid' },
-        solve: { heading: 'Solve a Grid' },
+        generate: {
+            text: 'text-generate',
+            cellBg: 'bg-board-generate',
+            gradient: 'bg-gradient-to-r from-generate-l to-generate-r',
+            ctaBg: 'bg-generate',
+        },
+        verify: { text: 'text-verify', cellBg: 'bg-board-verify', gradient: 'bg-gradient-to-r from-verify-l to-verify-r', ctaBg: 'bg-verify' },
+        solve: { text: 'text-solve', cellBg: 'bg-board-solve', gradient: 'bg-gradient-to-r from-solve-l to-solve-r', ctaBg: 'bg-solve' },
     }[type];
 
     const featureBoard = <FeatureBoard cellBg={cellBg!} className='ml-36' />;
