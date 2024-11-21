@@ -17,6 +17,8 @@ jobs:
         steps:
             - name: Checkout repository
               uses: actions/checkout@v4
+              with:
+                  token: ${{ secrets.ACTION_PAT }}
 
             - id: check-preview-branch
               name: Check PR for Preview branch
