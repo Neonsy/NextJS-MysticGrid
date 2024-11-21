@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { FaGithub } from 'react-icons/fa6';
 
 import { LuSun } from 'react-icons/lu';
 import { LuMoon } from 'react-icons/lu';
@@ -28,10 +29,15 @@ export default function Nav() {
                 ))}
             </ul>
 
-            <button className='rounded-full bg-inverted p-2.5 text-3xl'>
-                <LuSun className='text-default' />
-                <LuMoon className='hidden text-default' />
-            </button>
+            <div className='flex items-center justify-center gap-x-6'>
+                <Link href='https://github.com/Neonsy/NextJS-MysticGrid' target='_blank' rel='noopener noreferrer' className='text-3xl text-default'>
+                    <FaGithub className='text-default' />
+                </Link>
+                <button className='rounded-full bg-inverted p-2.5 text-3xl'>
+                    <LuSun className='text-default' />
+                    <LuMoon className='hidden text-default' />
+                </button>
+            </div>
         </nav>
     );
 }

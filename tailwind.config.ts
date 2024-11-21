@@ -29,6 +29,7 @@ export default {
             backgroundColor: {
                 header: 'hsl(var(--bg-header) / <alpha-value>)',
                 features: 'hsl(var(--bg-features) / <alpha-value>)',
+                footer: 'hsl(var(--bg-footer) / <alpha-value>)',
             },
             gradientColorStops: {
                 'primary-l': 'hsl(var(--gradient-primary-l) / <alpha-value>)',

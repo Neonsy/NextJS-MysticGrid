@@ -3,10 +3,10 @@ import Nav from '@/components/header/nav';
 
 export default function Header() {
     return (
-        <header className='h-header sticky top-0 z-10 bg-header/95 backdrop-blur-sm'>
-            <Container>
-                <Nav />
-            </Container>
+        <header className='sticky top-0 z-10 h-header bg-header/75 backdrop-blur-sm'>
+                <Container>
+                    <Nav />
+                </Container>
         </header>
     );
 }
