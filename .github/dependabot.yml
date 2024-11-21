@@ -1,0 +1,13 @@
+version: 2
+updates:
+    - package-ecosystem: 'npm'
+      directory: '/'
+      target-branch: 'Dev'
+      labels:
+          - 'Dependabot'
+          - 'NodeJS'
+      schedule:
+          timezone: 'Europe/Berlin'
+          interval: 'weekly'
+          day: 'monday'
+          time: '15:00'

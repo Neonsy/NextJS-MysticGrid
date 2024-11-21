@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --bg-header: 222deg 45% 12%;
+        --bg-features: 240deg 55% 9%;
+        --bg-technologies: 240deg 45% 9%;
+        --bg-footer: 240deg 55% 9%;
+
+        --gradient-primary-l: 240deg 50% 18%;
+        --gradient-primary-r: 240deg 55% 9%;
+        --gradient-generate-l: 240deg 30% 18%;
+        --gradient-generate-r: 240deg 50% 18%;
+        --gradient-solve-l: 60deg 21% 18%;
+        --gradient-solve-r: 240deg 25% 12%;
+        --gradient-verify-l: 208deg 20% 15%;
+        --gradient-verify-r: 134deg 25% 20%;
+
+        --color-text: 0deg 100% 100%;
+        --color-text-inverted: 0deg 100% 0%;
+
+        --color-primary: 195deg 100% 55%;
+        --color-generate: 350deg 65% 55%;
+        --color-solve: 45deg 75% 60%;
+        --color-verify: 155deg 75% 60%;
+
+        --color-board-primary: 220deg 90% 36%;
+        --color-board-generate: 350deg 75% 30%;
+        --color-board-solve: 45deg 75% 36%;
+        --color-board-verify: 155deg 75% 36%;
+
+        --height-header: 90px;
+        --height-hero: calc(100dvh - var(--height-header));
+    }
+}
