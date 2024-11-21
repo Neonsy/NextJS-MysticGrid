@@ -1,6 +1,7 @@
 import Feature from '@/components/pages/home/feature';
 import Features from '@/components/pages/home/features';
 import Hero from '@/components/pages/home/hero';
+import Technologies from '@/components/pages/home/technologies';
 
 import { IoMdCheckmarkCircleOutline } from 'react-icons/io';
 import { LuBrainCircuit, LuGrid, LuPlay } from 'react-icons/lu';
@@ -41,6 +42,8 @@ export default function Home() {
                 icon={LuBrainCircuit}
                 direction='rtl'
             />
+
+            <Technologies />
         </>
     );
 }

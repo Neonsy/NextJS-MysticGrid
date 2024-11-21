@@ -6,16 +6,17 @@
     :root {
         --bg-header: 222deg 45% 12%;
         --bg-features: 240deg 55% 9%;
-        --bg-footer: 240deg 56% 9%;
+        --bg-technologies: 240deg 45% 9%;
+        --bg-footer: 240deg 55% 9%;
 
-        --gradient-primary-l: 240deg 49% 19%;
-        --gradient-primary-r: 240deg 54% 9%;
-        --gradient-generate-l: 240deg 28% 16%;
-        --gradient-generate-r: 240deg 50% 20%;
-        --gradient-solve-l: 60deg 20% 20%;
-        --gradient-solve-r: 240deg 26% 11%;
+        --gradient-primary-l: 240deg 50% 18%;
+        --gradient-primary-r: 240deg 55% 9%;
+        --gradient-generate-l: 240deg 30% 18%;
+        --gradient-generate-r: 240deg 50% 18%;
+        --gradient-solve-l: 60deg 21% 18%;
+        --gradient-solve-r: 240deg 25% 12%;
         --gradient-verify-l: 208deg 20% 15%;
-        --gradient-verify-r: 134deg 26% 20%;
+        --gradient-verify-r: 134deg 25% 20%;
 
         --color-text: 0deg 100% 100%;
         --color-text-inverted: 0deg 100% 0%;
