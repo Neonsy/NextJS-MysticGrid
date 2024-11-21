@@ -2,11 +2,12 @@
 
 ## TODO Overview
 
-- Basic mockup
-  - responsiveness
-  - animations
+-   Basic mockup
 
-- Basic functionality
+    -   responsiveness
+    -   animations
 
-- Basic styling
-  - light mode styling
+-   Basic functionality
+
+-   Basic styling
+    -   light mode styling

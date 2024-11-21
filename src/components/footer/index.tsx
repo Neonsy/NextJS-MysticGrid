@@ -8,7 +8,6 @@ export default function Footer() {
     return (
         <footer className='bg-footer py-12 text-default'>
             <Container className='flex flex-col items-center justify-center gap-y-6'>
-                
                 <h2 className='text-3xl font-bold text-primary'>Mystic Grid</h2>
                 <p>This is a hobby Project. The code is open source and available on GitHub.</p>
                 <p>If you have any questions, feedback, or just want to say hi, feel free to reach out!</p>
