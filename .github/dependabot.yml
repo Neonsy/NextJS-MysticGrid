@@ -3,6 +3,7 @@ updates:
     - package-ecosystem: 'npm'
       directory: '/'
       target-branch: 'Dev'
+      open-pull-requests-limit: 18
       labels:
           - 'Dependabot'
           - 'NodeJS'
