@@ -2,7 +2,6 @@ import type { Config } from 'tailwindcss';
 
 import fluid, { extract } from 'fluid-tailwind';
 import plugin from 'tailwindcss/plugin';
-import Hero from '@/components/pages/home/hero';
 
 export default {
     content: {

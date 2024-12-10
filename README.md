@@ -2,12 +2,18 @@
 
 ## TODO Overview
 
--   Basic mockup
+### Frontend
 
-    -   responsiveness
-    -   animations
+- Build all pages
+    - Improve UI/UX over time
+    - Add animations
+    - Add light theme
+        - Make it responsive
 
--   Basic functionality
+### Backend
 
--   Basic styling
-    -   light mode styling
+- Add authentication
+- Add database
+- Add game logic
+    - Difficulties (What makes it harder?)
+- Add the other modes
