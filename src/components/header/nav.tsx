@@ -1,17 +1,16 @@
-import Link from 'next/link';
-import { FaGithub } from 'react-icons/fa6';
+"use client";
 
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+import { headerLinks } from '@/lib/utils/links';
+
+import { FaGithub } from 'react-icons/fa6';
 import { LuSun } from 'react-icons/lu';
 import { LuMoon } from 'react-icons/lu';
 
 export default function Nav() {
-    const links = [
-        { name: 'Home', href: '/' },
-        { name: 'Play', href: '/play' },
-        { name: 'Generate', href: '/generate' },
-        { name: 'Solve', href: '/solve' },
-        { name: 'Verify', href: '/verify' },
-    ];
+    const currentPath = usePathname();
 
     return (
         <nav className='flex items-center justify-between py-5'>
@@ -20,9 +19,9 @@ export default function Nav() {
             </Link>
 
             <ul className='flex gap-x-5 text-lg'>
-                {links.map((link) => (
+                {headerLinks.map((link) => (
                     <li key={link.name}>
-                        <a href={link.href} className='text-default'>
+                        <a href={link.href} className={`text-default ${currentPath === link.href ? 'font-bold' : ''}`}>
                             {link.name}
                         </a>
                     </li>
