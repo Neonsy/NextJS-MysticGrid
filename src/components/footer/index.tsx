@@ -1,6 +1,8 @@
-import Container from '@/components/container';
-import { getYear } from '@/lib/utils/date';
 import Link from 'next/link';
+
+import { getYear } from '@/lib/utils/date';
+import Container from '@/components/container';
+
 import { FaDiscord, FaRegCopyright } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa6';
 
