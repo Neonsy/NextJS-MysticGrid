@@ -4,7 +4,7 @@ import Hero from '@/components/pages/home/hero';
 import Technologies from '@/components/pages/home/technologies';
 
 import { IoMdCheckmarkCircleOutline } from 'react-icons/io';
-import { LuBrainCircuit, LuGrid, LuPlay } from 'react-icons/lu';
+import { LuBrainCircuit, LuGrid3X3, LuPlay } from 'react-icons/lu';
 
 export default function Home() {
     return (
@@ -24,7 +24,7 @@ export default function Home() {
                 heading='Generate a Puzzle'
                 description='Harness the power of our mystical algorithms to create unique Sudoku puzzles. Choose your difficulty and watch as the grid materializes before your eyes.'
                 cta='Conjure a Puzzle'
-                icon={LuGrid}
+                icon={LuGrid3X3}
                 direction='rtl'
             />
             <Feature

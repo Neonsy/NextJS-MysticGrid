@@ -1,7 +1,7 @@
 import Container from '@/components/container';
 import InfoCard from '@/components/infoCard';
 import { IoMdCheckmarkCircleOutline } from 'react-icons/io';
-import { LuBrainCircuit, LuGrid, LuPlay } from 'react-icons/lu';
+import { LuBrainCircuit, LuGrid3X3, LuPlay } from 'react-icons/lu';
 export default function Features() {
     return (
         <section id='features' className='bg-features'>
@@ -18,7 +18,7 @@ export default function Features() {
                         title='Generate'
                         description='Conjure unique Sudoku grids with varying levels of difficutly.'
                         type='generate'
-                        icon={LuGrid}
+                        icon={LuGrid3X3}
                     />
                     <InfoCard
                         title='Solve'

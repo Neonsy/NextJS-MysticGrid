@@ -1,0 +1,18 @@
+paths:
+  - src
+  - lib
+paths-ignore:
+  - '**/*.test.ts'
+  - '**/*.test.js'
+  - '**/node_modules'
+  - '**/dist'
+  - '**/build'
+  - '**/.next'
+  - '**/out'
+query-filters:
+  - exclude:
+      problem.severity:
+        - warning
+        - recommendation
+  - include:
+      tags contain: security
