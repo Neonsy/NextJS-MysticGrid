@@ -2,13 +2,14 @@ import Icons from '@/components/icons';
 import { IconType } from 'react-icons';
 
 type InfoCardProps = {
+    span?: string;
     icon: IconType;
     title: string;
     description?: string;
     type?: 'primary' | 'generate' | 'verify' | 'solve';
 };
 
-export default function InfoCard({ icon, title, description, type = 'primary' }: InfoCardProps) {
+export default function InfoCard({ icon, title, description, span, type = 'primary' }: InfoCardProps) {
     const { text, border, bg } = {
         primary: {
             text: 'text-primary',
@@ -33,7 +34,7 @@ export default function InfoCard({ icon, title, description, type = 'primary' }:
     }[type];
 
     return (
-        <div className={`${border} relative flex flex-col gap-y-2 rounded-3xl border ${bg ? 'bg-slate-900/50' : ''} px-5 py-9`}>
+        <div className={`${border} relative flex flex-col gap-y-2 rounded-3xl border ${bg ? 'bg-slate-900/50' : ''} px-5 py-9 ${span}`}>
             <Icons icon={icon} className={`mb-3 text-5xl ${text}`} />
 
             <p className='text-3xl font-bold text-default'>{title}</p>
