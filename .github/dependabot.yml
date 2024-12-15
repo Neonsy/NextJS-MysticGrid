@@ -11,4 +11,4 @@ updates:
           timezone: 'Europe/Berlin'
           interval: 'weekly'
           day: 'monday'
-          time: '15:00'
+          time: '03:00'
