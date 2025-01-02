@@ -1,5 +1,7 @@
 # MysticGrid
 
+[![Main CI/CD](https://github.com/Neonsy/NextJS-MysticGrid/actions/workflows/main-ci-cd.yml/badge.svg)](https://github.com/Neonsy/NextJS-MysticGrid/actions/workflows/main-ci-cd.yml)
+
 ## Motivation 🎯
 
 From the structured world of C# and Java to the dynamic landscape of web development, MysticGrid represents my next ambitious step.
