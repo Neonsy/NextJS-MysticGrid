@@ -2,8 +2,11 @@ name: Main CI/CD
 
 on:
     pull_request:
-        branches: [main, Preview]
+        branches: main
         types: [opened, reopened, synchronize]
+    push:
+        branches:
+            - main
 
 jobs:
     restrict-pr:
@@ -218,20 +221,19 @@ jobs:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     vercel:
-            runs-on: ubuntu-latest
-            needs: [integrity-check]
-            steps:
-                - name: Checkout
-                  uses: actions/checkout@v4
-            
-                - name: Deploy to Vercel Action
-                  uses: shehroze-1122/deploy-to-vercel-action@v2.0.0
-                  with:
-                      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-                      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-                      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-                    #   BUILD_ENV: |
-                    #       FOO="bar"
-                    #       SOME_TOKEN="${{ secrets.SOME_TOKEN }}"
-                  
+        runs-on: ubuntu-latest
+        needs: [integrity-check]
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Deploy to Vercel Action
+              uses: shehroze-1122/deploy-to-vercel-action@v2.0.0
+              with:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+                  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+                  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+                  #   BUILD_ENV: |
+                  #       FOO="bar"
+                  #       SOME_TOKEN="${{ secrets.SOME_TOKEN }}"
