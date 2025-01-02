@@ -1,0 +1,14 @@
+version: 2
+updates:
+    - package-ecosystem: 'npm'
+      directory: '/project'
+      target-branch: 'Dev'
+      open-pull-requests-limit: 18
+      labels:
+          - 'Dependabot'
+          - 'NodeJS'
+      schedule:
+          timezone: 'Europe/Berlin'
+          interval: 'weekly'
+          day: 'monday'
+          time: '03:00'
