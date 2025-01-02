@@ -4,6 +4,9 @@ on:
     types: [opened, reopened, synchronize]
     branches:
       - Dev
+  push:
+    branches:
+      - Dev
 
 permissions:
   contents: write
