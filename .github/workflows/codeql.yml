@@ -4,7 +4,7 @@ on:
     push:
         branches: ['Dev']
     pull_request:
-        branches: ['Dev']
+        branches: ['Dev', 'Preview', 'main']
     schedule:
         - cron: '0 6 * * 1' # Runs at (6 AM) on Monday
 
