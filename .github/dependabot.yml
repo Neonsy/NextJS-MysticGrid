@@ -6,6 +6,7 @@ updates:
       open-pull-requests-limit: 18
       labels:
           - 'Dependabot'
+          - 'Dependencies'
           - 'NodeJS'
       schedule:
           timezone: 'Europe/Berlin'
