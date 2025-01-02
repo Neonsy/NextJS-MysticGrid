@@ -22,15 +22,15 @@ This project isn't just about solving puzzles - it's about crafting an engaging 
 > [!NOTE]
 > These technologies might be subject to change
 
-- TypeScript
-- React
-- NextJS
+- [TypeScript](https://www.typescriptlang.org/)
+- [React](https://react.dev/)
+- [NextJS](https://nextjs.org/)
 
-- React Icons
-- Tailwind
-- Glaze
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [Tailwind](https://tailwindcss.com/)
+- [Motion](https://www.motion.dev/)
 
-- Clerk
-- TanStack Query
-- DrizzleORM
-- Turso
+- [Clerk](https://clerk.com/)
+- [TanStack Query](https://tanstack.com/query)
+- [DrizzleORM](https://orm.drizzle.team/)
+- [Turso](https://turso.tech/)
