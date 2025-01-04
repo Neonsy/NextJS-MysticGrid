@@ -1,4 +1,4 @@
-import type { NavLinkType, ExternalNavLinkType } from '@/types/navLink';
+import { NavLinkType, ExternalNavLinkType } from '@/types/navLink';
 import ExternalLinks from '@/components/links/external';
 import InternalLinks from '@/components/links/internal';
 
