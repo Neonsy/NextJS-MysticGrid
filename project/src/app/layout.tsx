@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
-import HeroImage from '@/assets/images/home/body-backdrop.webp';
+import HeroImage from '@/assets/images/body-backdrop.webp';
 
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -62,11 +62,10 @@ export default function RootLayout({
                     src={HeroImage}
                     alt='Background'
                     className='fixed inset-0 -z-10 h-full w-full select-none border-y border-white/20 bg-white/10 bg-cover bg-center opacity-75 shadow-lg backdrop-blur-sm'
-                    quality={10}
+                    placeholder='blur'
+                    quality={75}
                     priority
                     loading='eager'
-                    placeholder='blur'
-                    fill
                 />
                 <div className='flex min-h-dvh flex-col'>
                     <Header />
