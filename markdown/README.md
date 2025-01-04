@@ -39,3 +39,7 @@ This project isn't just about solving puzzles - it's about crafting an engaging 
 - [TanStack Query](https://tanstack.com/query)
 - [DrizzleORM](https://orm.drizzle.team/)
 - [Turso](https://turso.tech/)
+
+## Other
+
+More information about the project can be found [here](/markdown)
