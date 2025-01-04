@@ -1,9 +1,15 @@
 import type { IconName } from '@/lib/icons';
 
-export type NavLinkType = {
+export interface InternalNavLinkType {
     text: string;
     href: string;
+    prefetch?: boolean;
     target?: string;
     rel?: string;
-    iconName?: IconName;
-};
+}
+
+export interface ExternalNavLinkType extends InternalNavLinkType {
+    iconName: IconName;
+}
+
+export type NavLinkType = InternalNavLinkType | ExternalNavLinkType;
