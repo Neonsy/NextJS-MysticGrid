@@ -3,6 +3,9 @@
 [![Main CI/CD](https://github.com/Neonsy/NextJS-MysticGrid/actions/workflows/main-ci-cd.yml/badge.svg)](https://github.com/Neonsy/NextJS-MysticGrid/actions/workflows/main-ci-cd.yml)
 [![Deploy to Vercel](https://github.com/Neonsy/NextJS-MysticGrid/actions/workflows/deploy.yml/badge.svg)](https://github.com/Neonsy/NextJS-MysticGrid/actions/workflows/deploy.yml)
 
+> [!NOTE]
+> This project is currently in the early stages of development and progress can be tracked [here](https://github.com/Neonsy/NextJS-MysticGrid/tree/Dev).
+
 ## Motivation 🎯
 
 From the structured world of C# and Java to the dynamic landscape of web development, MysticGrid represents my next ambitious step.
@@ -29,6 +32,8 @@ This project isn't just about solving puzzles - it's about crafting an engaging 
 - [React Icons](https://react-icons.github.io/react-icons/)
 - [Tailwind](https://tailwindcss.com/)
 - [Motion](https://www.motion.dev/)
+
+- [XState](https://xstate.js.org/)
 
 - [Clerk](https://clerk.com/)
 - [TanStack Query](https://tanstack.com/query)
