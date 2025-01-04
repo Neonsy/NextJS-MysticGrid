@@ -30,18 +30,21 @@ export const socialNav: NavLinkType[] = [
         href: 'https://www.instagram.com/neonsy01/',
         target: '_blank',
         rel: 'noopener noreferrer',
+        iconName: 'instagram' as IconName,
     },
     {
         text: 'github',
         href: 'https://github.com/neonsy',
         target: '_blank',
         rel: 'noopener noreferrer',
+        iconName: 'github' as IconName,
     },
     {
         text: 'discord',
         href: 'https://discord.gg/aK3B9QyGU4',
         target: '_blank',
         rel: 'noopener noreferrer',
+        iconName: 'discord' as IconName,
     },
 ];
 

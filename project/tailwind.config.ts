@@ -13,8 +13,9 @@ export default {
     theme: {
         extend: {
             colors: {
-                header: 'hsl(var(--header-primary) / <alpha-value>)',
                 body: 'hsl(var(--body-primary) / <alpha-value>)',
+                header: 'hsl(var(--header-primary) / <alpha-value>)',
+                footer: 'hsl(var(--footer-primary) / <alpha-value>)',
             },
         },
     },
