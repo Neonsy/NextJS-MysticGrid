@@ -1,9 +1,11 @@
-import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+
 import './globals.css';
+
+import type { Metadata } from 'next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -53,7 +55,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
-            <body className={`${inter.className} bg-body antialiased`}>
+            <body className={`${inter.className} bg-gradient-body antialiased`}>
                 <div className='flex min-h-dvh flex-col'>
                     <Header />
                     <main className='flex-grow'>{children}</main>

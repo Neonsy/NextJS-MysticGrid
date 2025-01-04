@@ -4,7 +4,11 @@
 
 :root {
     --body-primary: 207deg 99% 9%;
-    
+
+    --body-start: 222deg 55% 3%;
+    --body-middle: 207deg 99% 18%;
+    --body-end: 270deg 55% 3%;
+
     --header-primary: 222deg 55% 3%;
     --footer-primary: 270deg 55% 3%;
 

@@ -1,3 +1,5 @@
+import Hero from '@/components/app/home/sections/hero';
+
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -9,5 +11,5 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-    return <></>;
+    return <Hero />;
 }

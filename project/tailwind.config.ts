@@ -17,6 +17,9 @@ export default {
                 header: 'hsl(var(--header-primary) / <alpha-value>)',
                 footer: 'hsl(var(--footer-primary) / <alpha-value>)',
             },
+            backgroundImage: {
+                'gradient-body': 'linear-gradient(to bottom right, hsl(var(--body-start)), hsl(var(--body-middle)), hsl(var(--body-end)))',
+            },
         },
     },
     plugins: [

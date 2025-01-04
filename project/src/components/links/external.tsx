@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Icon from '@/components/icons';
+
 import type { ExternalNavLinkType } from '@/types/navLink';
 
 type Props = {
