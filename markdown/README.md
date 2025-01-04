@@ -1,6 +1,10 @@
-# MysticGrid
+# [Explore the MysticGrid](https://nextjs-mysticgrid.vercel.app/)
 
 [![Main CI/CD](https://github.com/Neonsy/NextJS-MysticGrid/actions/workflows/main-ci-cd.yml/badge.svg)](https://github.com/Neonsy/NextJS-MysticGrid/actions/workflows/main-ci-cd.yml)
+[![Deploy to Vercel](https://github.com/Neonsy/NextJS-MysticGrid/actions/workflows/deploy.yml/badge.svg)](https://github.com/Neonsy/NextJS-MysticGrid/actions/workflows/deploy.yml)
+
+> [!NOTE]
+> This project is currently in the early stages of development and progress can be tracked [here](https://github.com/Neonsy/NextJS-MysticGrid/tree/Dev).
 
 ## Motivation 🎯
 
@@ -21,15 +25,21 @@ This project isn't just about solving puzzles - it's about crafting an engaging 
 > [!NOTE]
 > These technologies might be subject to change
 
-- TypeScript
-- React
-- NextJS
+- [TypeScript](https://www.typescriptlang.org/)
+- [React](https://react.dev/)
+- [NextJS](https://nextjs.org/)
 
-- React Icons
-- Tailwind
-- Glaze
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [Tailwind](https://tailwindcss.com/)
+- [Motion](https://www.motion.dev/)
 
-- Clerk
-- TanStack Query
-- DrizzleORM
-- Turso
+- [XState](https://xstate.js.org/)
+
+- [Clerk](https://clerk.com/)
+- [TanStack Query](https://tanstack.com/query)
+- [DrizzleORM](https://orm.drizzle.team/)
+- [Turso](https://turso.tech/)
+
+## Other
+
+More information about the project can be found [here](/markdown)

@@ -1,10 +1,22 @@
-# What I've imagined
+# Workflow Overview
 
-Basically, if I just work without a plan ;), then I push on Dev directly.
-However, if I have a plan, I would create a PR from a temporary branch, targeting Dev.
+## Development Process
 
-Every now and then, I would push a PR from Dev to Preview, where the code is being checked for linting and formatting.
+Without a planned feature:
+I push changes directly to the Dev branch.
 
-If everything seems fine, it'll then be PRed to Main.
-In that PR, a preview will be built and deployed.
-If everything works as expected, then the PR will be merged and a production-ready build will be deployed.
+With a planned feature:
+I create a temporary feature branch.
+I create a PR targeting the Dev branch.
+
+## Quality Assurance
+
+From Dev to Preview:
+I periodically create PRs to the Preview branch.
+Code undergoes linting and formatting checks.
+
+From Preview to Main:
+After passing Quality Assurance (QA), I create a PR targeting Main.
+A preview build is generated and deployed.
+Upon successful testing, the PR is merged.
+A production build is automatically deployed.
