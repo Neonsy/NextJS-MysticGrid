@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: {
@@ -9,10 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-    return (
-        <>
-            <h1>MysticGrid</h1>
-            <p>W.I.P</p>
-        </>
-    );
+    return <></>;
 }

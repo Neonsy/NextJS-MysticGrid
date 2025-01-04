@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --header-primary: 222deg 55% 3%;
+    --body-primary: 207deg 99% 9%;
+    --text-primary: 0deg 0% 99%;
+}
+
+/* @media (prefers-color-scheme: light) {
+    :root {
+    }
+} */
+
+* {
+    color: hsl(var(--text-primary));
+}

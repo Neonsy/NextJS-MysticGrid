@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 import fluid, { extract } from 'fluid-tailwind';
+import forms from '@tailwindcss/forms';
 import plugin from 'tailwindcss/plugin';
 
 export default {
@@ -12,46 +13,14 @@ export default {
     theme: {
         extend: {
             colors: {
-                default: 'hsl(var(--color-text) / <alpha-value>)',
-                inverted: 'hsl(var(--color-text-inverted) / <alpha-value>)',
-
-                primary: 'hsl(var(--color-primary) / <alpha-value>)',
-                generate: 'hsl(var(--color-generate) / <alpha-value>)',
-                verify: 'hsl(var(--color-verify) / <alpha-value>)',
-                solve: 'hsl(var(--color-solve) / <alpha-value>)',
-
-                'board-primary': 'hsl(var(--color-board-primary) / <alpha-value>)',
-                'board-generate': 'hsl(var(--color-board-generate) / <alpha-value>)',
-                'board-solve': 'hsl(var(--color-board-solve) / <alpha-value>)',
-                'board-verify': 'hsl(var(--color-board-verify) / <alpha-value>)',
-            },
-            backgroundColor: {
-                header: 'hsl(var(--bg-header) / <alpha-value>)',
-                features: 'hsl(var(--bg-features) / <alpha-value>)',
-                technologies: 'hsl(var(--bg-technologies) / <alpha-value>)',
-                footer: 'hsl(var(--bg-footer) / <alpha-value>)',
-            },
-            gradientColorStops: {
-                'primary-l': 'hsl(var(--gradient-primary-l) / <alpha-value>)',
-                'primary-r': 'hsl(var(--gradient-primary-r) / <alpha-value>)',
-                'generate-l': 'hsl(var(--gradient-generate-l) / <alpha-value>)',
-                'generate-r': 'hsl(var(--gradient-generate-r) / <alpha-value>)',
-                'solve-l': 'hsl(var(--gradient-solve-l) / <alpha-value>)',
-                'solve-r': 'hsl(var(--gradient-solve-r) / <alpha-value>)',
-                'verify-l': 'hsl(var(--gradient-verify-l) / <alpha-value>)',
-                'verify-r': 'hsl(var(--gradient-verify-r) / <alpha-value>)',
-            },
-            height: {
-                header: 'var(--height-header)',
-            },
-            minHeight: {
-                hero: 'var(--height-hero)',
+                header: 'hsl(var(--header-primary) / <alpha-value>)',
+                body: 'hsl(var(--body-primary) / <alpha-value>)',
             },
         },
     },
     plugins: [
         fluid,
-        require('@tailwindcss/forms'),
+        forms,
         plugin(function ({ addComponents }) {
             addComponents({
                 '.info-card-blob': {
