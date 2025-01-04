@@ -62,7 +62,11 @@ export default function RootLayout({
                     src={HeroImage}
                     alt='Background'
                     className='fixed inset-0 -z-10 h-full w-full select-none border-y border-white/20 bg-white/10 bg-cover bg-center opacity-75 shadow-lg backdrop-blur-sm'
+                    quality={10}
                     priority
+                    loading='eager'
+                    placeholder='blur'
+                    fill
                 />
                 <div className='flex min-h-dvh flex-col'>
                     <Header />
