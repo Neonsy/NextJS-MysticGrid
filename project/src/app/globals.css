@@ -3,16 +3,27 @@
 @tailwind utilities;
 
 :root {
+    /* Body vars */
     --body-primary: 207deg 99% 9%;
 
-    --body-start: 222deg 55% 3%;
-    --body-middle: 207deg 99% 18%;
+    --body-start: 270deg 55% 3%;
+    --body-middle: 270deg 99% 18%;
     --body-end: 270deg 55% 3%;
 
+    /* Header vars */
     --header-primary: 222deg 55% 3%;
+
+    /* Footer vars */
     --footer-primary: 270deg 55% 3%;
 
+    /* Text vars */
     --text-primary: 0deg 0% 99%;
+
+    /* Scrollbar vars */
+    --track: 270deg 99% 90%;
+
+    --thumb: 270deg 75% 30%;
+    --thumb-hover: 270deg 75% 9%;
 }
 
 /* @media (prefers-color-scheme: light) {

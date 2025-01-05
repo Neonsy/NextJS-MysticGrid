@@ -1,3 +1,5 @@
 export default function Hero() {
-    return <section>{/* Hero content will go here */}</section>;
+    return <section>
+        <div className="h-[300vh] bg-body-backdrop" />
+    </section>;
 }

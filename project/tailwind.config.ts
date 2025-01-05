@@ -43,6 +43,27 @@ export default {
                         zIndex: '-50',
                     },
                 },
+                '::-webkit-scrollbar': {
+                    width: '15px',
+                },
+                '::-webkit-scrollbar-track': {
+                    background: 'hsl(var(--track))',
+                    backdropFilter: 'blur(12px)',
+                },
+                '::-webkit-scrollbar-thumb': {
+                    background: 'hsl(var(--thumb))',
+                    border: '3.6px solid transparent',
+                    borderRadius: '6px',
+                    backgroundClip: 'padding-box',
+                    backdropFilter: 'blur(12px)',
+                },
+                '::-webkit-scrollbar-thumb:hover': {
+                    background: 'hsl(var(--thumb-hover))',
+                    border: '2px solid transparent',
+                    borderRadius: '6px',
+                    backgroundClip: 'padding-box',
+                    backdropFilter: 'blur(12px)',
+                },
             });
         }),
     ],
