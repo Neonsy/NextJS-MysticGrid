@@ -1,9 +1,7 @@
 import { Inter } from 'next/font/google';
-import Image from 'next/image';
-import HeroImage from '@/assets/images/body-backdrop.webp';
 
-import Header from '@/components/header';
 import Footer from '@/components/footer';
+import Header from '@/components/header';
 
 import './globals.css';
 
@@ -57,16 +55,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
-            <body className={`${inter.className} bg-gradient-body antialiased`}>
-                <Image
-                    src={HeroImage}
-                    alt='Background'
-                    className='fixed inset-0 -z-10 h-full w-full select-none border-y border-white/20 bg-white/10 bg-cover bg-center opacity-75 shadow-lg backdrop-blur-sm'
-                    placeholder='blur'
-                    quality={75}
-                    priority
-                    loading='eager'
-                />
+            <body className={`${inter.className} bg-body-backdrop antialiased`}>
                 <div className='flex min-h-dvh flex-col'>
                     <Header />
                     <main className='flex-grow'>{children}</main>

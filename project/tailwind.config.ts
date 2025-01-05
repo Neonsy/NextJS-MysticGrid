@@ -17,9 +17,6 @@ export default {
                 header: 'hsl(var(--header-primary) / <alpha-value>)',
                 footer: 'hsl(var(--footer-primary) / <alpha-value>)',
             },
-            backgroundImage: {
-                'gradient-body': 'linear-gradient(to bottom right, hsl(var(--body-start)), hsl(var(--body-middle)), hsl(var(--body-end)))',
-            },
         },
     },
     plugins: [
@@ -27,13 +24,24 @@ export default {
         forms,
         plugin(function ({ addComponents }) {
             addComponents({
-                '.info-card-blob': {
-                    borderRadius: '0 45% 0 100%',
-                    width: '50px',
-                    height: '50px',
-                },
-                '.board-cell-shadow': {
-                    boxShadow: 'inset 0 0 6px 1px rgba(0, 0, 0, 0.75)',
+                '.bg-body-backdrop': {
+                    position: 'relative',
+                    background: 'linear-gradient(to bottom right, hsl(var(--body-start)), hsl(var(--body-middle)), hsl(var(--body-end)))',
+                    '&::before': {
+                        content: '""',
+                        position: 'fixed',
+                        top: '0',
+                        left: '0',
+                        width: '100%',
+                        height: '100%',
+                        backgroundImage: 'url(/images/body-backdrop.webp)',
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundAttachment: 'fixed',
+                        opacity: '0.75',
+                        zIndex: '-50',
+                    },
                 },
             });
         }),
