@@ -59,6 +59,11 @@ jobs:
               working-directory: ./project
               run: vercel build --token ${{ secrets.VERCEL_TOKEN }}
 
+            - name: Debug Output Directory
+              working-directory: ./project
+              run: |
+                  ls -la project/.vercel/output
+
             - name: Deploy to Vercel Action
               uses: shehroze-1122/deploy-to-vercel-action@v2.0.0
               with:
@@ -66,6 +71,5 @@ jobs:
                   VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
                   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
                   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-                  WORKING_DIRECTORY: project
                   PREBUILT: true
                   PR_LABELS: Deployed
