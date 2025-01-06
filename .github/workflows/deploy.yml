@@ -45,7 +45,6 @@ jobs:
 
             - name: Install Vercel CLI
               run: pnpm add -g vercel
-
             - name: Pull Vercel Environment (PR)
               if: github.event_name == 'pull_request'
               working-directory: ./project
@@ -56,15 +55,18 @@ jobs:
               working-directory: ./project
               run: vercel pull --yes --environment=production --token ${{ secrets.VERCEL_TOKEN }}
 
-            - name: Build Project
+            - name: Build Project (PR)
+              if: github.event_name == 'pull_request'
               working-directory: ./project
-              run: vercel build --token ${{ secrets.VERCEL_TOKEN }}
-              env:
-                  VERCEL_ENV: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && 'production' || 'preview' }}
+              run: vercel build --token ${{ secrets.VERCEL_TOKEN }} --environment=preview
+
+            - name: Build Project (Production)
+              if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+              working-directory: ./project
+              run: vercel build --token ${{ secrets.VERCEL_TOKEN }} --environment=production
 
             - name: Deploy to Vercel Action
               uses: BetaHuhn/deploy-to-vercel-action@v1.10.0
-
               with:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
