@@ -68,11 +68,6 @@ jobs:
                   path: ${{ github.workspace }}/.vercel/output
                   github-token: ${{ secrets.GITHUB_TOKEN }}
 
-            - name: Debug Vercel output directory
-              run: |
-                  echo "Contents of .vercel/output directory:"
-                  ls -la ${{ github.workspace }}/.vercel/output
-
             - name: Deploy to Vercel Action
               uses: shehroze-1122/deploy-to-vercel-action@v2.0.0
               with:
@@ -81,7 +76,6 @@ jobs:
                   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
                   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
                   PREBUILT: true
-                  WORKING_DIRECTORY: ${{ github.workspace }}/.vercel/output
                   PR_LABELS: Deployed
 
             - name: Delete artifacts
