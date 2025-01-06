@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 
 import Hero from '@/app/page/sections/hero';
-import Container from '@/components/container';
+import Modes from '@/app/page/sections/modes';
 import MysticalPowers from '@/app/page/sections/mysticalPowers';
+import Container from '@/components/container';
 
 export const metadata: Metadata = {
     title: {
@@ -17,6 +18,7 @@ export default function Home() {
         <Container className='backdrop-blur-lg'>
             <Hero />
             <MysticalPowers />
+            <Modes />
         </Container>
     );
 }

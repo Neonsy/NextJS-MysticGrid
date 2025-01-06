@@ -20,7 +20,7 @@ export default function MysticalPowers() {
         },
         {
             title: 'Verify',
-            description: 'Validate your solutions with mystical precision.',
+            description: 'Validate your grid with mystical precision.',
             icon: 'verify' as IconName,
             color: 'text-verify-text',
             iconColor: 'text-verify',
@@ -37,7 +37,7 @@ export default function MysticalPowers() {
     return (
         <section className='bg-slate-900/75 py-16'>
             <h2 className='mb-12 text-center text-4xl font-bold'>Mystical Powers</h2>
-            <div className='mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4'>
+            <div className='mx-auto grid max-w-6xl grid-cols-2 gap-6'>
                 {features.map((feature) => (
                     <FeatureCard key={feature.title} {...feature} />
                 ))}

@@ -31,16 +31,16 @@
     --gradient-logo-end: 327deg 73% 70%; /* pink-400 */
 
     /* Section Colors */
-    --color-play: 180deg 100% 81%;
+    --color-play: 210deg 100% 81%;
     --color-generate: 270deg 100% 81%;
-    --color-verify: 45deg 100% 81%;
-    --color-solve: 18deg 100% 81%;
+    --color-verify: 36deg 100% 81%;
+    --color-solve: 150deg 100% 81%;
 
     /* Section Text Colors - for better contrast */
-    --color-play-text: 180deg 100% 63%;
-    --color-generate-text: 270deg 100% 63%;
-    --color-verify-text: 45deg 100% 63%;
-    --color-solve-text: 18deg 100% 63%;
+    --color-play-text: 210deg 100% 54%;
+    --color-generate-text: 270deg 100% 54%;
+    --color-verify-text: 36deg 100% 45%;
+    --color-solve-text: 150deg 100% 27%;
 }
 
 /* @media (prefers-color-scheme: light) {
