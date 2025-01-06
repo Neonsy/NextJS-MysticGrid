@@ -55,23 +55,36 @@ jobs:
               working-directory: ./project
               run: vercel pull --yes --environment=production --token ${{ secrets.VERCEL_TOKEN }}
 
-            - name: Build Project
+            - name: Build Project (Preview)
+              if: github.event_name == 'pull_request'
               working-directory: ./project
-              env:
-                  VERCEL_ENV: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && 'production' || 'preview' }}
               run: vercel build --token ${{ secrets.VERCEL_TOKEN }}
 
-            - name: Deploy Project
+            - name: Build Project (Production)
+              if: github.event_name == 'push' && github.ref == 'refs/heads/main'
               working-directory: ./project
-              id: deploy
+              run: vercel build --token ${{ secrets.VERCEL_TOKEN }}
+
+            - name: Deploy Project (Preview)
+              if: github.event_name == 'pull_request'
+              working-directory: ./project
+              id: deploy-preview
               run: |
-                  DEPLOY_OUTPUT=$(vercel deploy --prebuilt --token ${{ secrets.VERCEL_TOKEN }} ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && '--prod' || '' }})
+                  DEPLOY_OUTPUT=$(vercel deploy --prebuilt --token ${{ secrets.VERCEL_TOKEN }})
+                  echo "DEPLOY_URL=$DEPLOY_OUTPUT" >> $GITHUB_OUTPUT
+
+            - name: Deploy Project (Production)
+              if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+              working-directory: ./project
+              id: deploy-prod
+              run: |
+                  DEPLOY_OUTPUT=$(vercel deploy --prebuilt --token ${{ secrets.VERCEL_TOKEN }} --prod)
                   echo "DEPLOY_URL=$DEPLOY_OUTPUT" >> $GITHUB_OUTPUT
 
             - name: Comment Preview URL
               if: github.event_name == 'pull_request'
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  DEPLOY_URL: ${{ steps.deploy.outputs.DEPLOY_URL }}
+                  DEPLOY_URL: ${{ steps.deploy-preview.outputs.DEPLOY_URL }}
               run: |
                   gh pr comment ${{ github.event.pull_request.number }} --body "🚀 Preview deployment is ready! You can view it at: $DEPLOY_URL"
