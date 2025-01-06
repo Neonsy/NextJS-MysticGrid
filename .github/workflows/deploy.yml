@@ -62,7 +62,7 @@ jobs:
             - name: Debug Output Directory
               run: |
                   tree ./project
-                  tree ./project/vercel
+                  tree ./project/.vercel
                   tree ./project/.vercel/output
 
             - name: Deploy to Vercel Action
