@@ -20,7 +20,7 @@ export default function Technologies() {
     ];
 
     return (
-        <section className='flex flex-col items-center justify-center gap-6 bg-slate-950/75 px-4 py-12 sm:gap-8 sm:px-8 sm:py-16'>
+        <section className='flex flex-col items-center justify-center gap-6 bg-slate-950/75 px-8 py-16 sm:gap-8 sm:px-16 sm:py-24'>
             <h2 className='text-center text-3xl font-bold sm:text-4xl'>Arcane Technologies</h2>
             <div className='grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 md:grid-cols-3 lg:grid-cols-4'>
                 {technologies.map((tech) => (

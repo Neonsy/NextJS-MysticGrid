@@ -35,14 +35,14 @@ export default function ModeCard({ title, description, ctaText, href, direction 
     }[variant];
 
     return (
-        <div className={`${variantStyles.container} px-4 py-8 sm:px-8 lg:px-24`}>
+        <div className={`${variantStyles.container} px-6 py-24 sm:px-12 lg:px-32`}>
             <div
-                className={`flex w-full flex-col items-center justify-center lg:flex-row lg:gap-x-64 ${direction === 'rtl' ? 'lg:flex-row-reverse' : ''} gap-y-8`}>
+                className={`flex w-full flex-col items-center justify-center lg:flex-row lg:gap-x-64 ${direction === 'rtl' ? 'lg:flex-row-reverse' : ''} gap-y-16`}>
                 <Number variant={variant} direction={direction} />
                 <div className='text-center lg:text-left'>
-                    <h2 className={`mb-4 text-2xl font-bold sm:text-3xl ${variantStyles.title}`}>{title}</h2>
-                    <p className='mb-6 max-w-lg text-slate-400'>{description}</p>
-                    <Link href={href} className={`${variantStyles.button} inline-block rounded-lg px-6 py-2 font-medium transition-colors`}>
+                    <h2 className={`mb-6 text-2xl font-bold sm:text-3xl ${variantStyles.title}`}>{title}</h2>
+                    <p className='mb-8 max-w-lg text-slate-400'>{description}</p>
+                    <Link href={href} className={`${variantStyles.button} inline-block rounded-lg px-8 py-3 font-medium transition-colors`}>
                         {ctaText} →
                     </Link>
                 </div>
