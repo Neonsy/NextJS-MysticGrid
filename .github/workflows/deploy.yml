@@ -55,15 +55,9 @@ jobs:
               working-directory: ./project
               run: vercel pull --yes --environment=production --token ${{ secrets.VERCEL_TOKEN }}
 
-            - name: Build Project (PR)
-              if: github.event_name == 'pull_request'
+            - name: Build Project
               working-directory: ./project
-              run: vercel build --token ${{ secrets.VERCEL_TOKEN }} --environment=preview
-
-            - name: Build Project (Production)
-              if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-              working-directory: ./project
-              run: vercel build --token ${{ secrets.VERCEL_TOKEN }} --environment=production
+              run: vercel build --token ${{ secrets.VERCEL_TOKEN }}
 
             - name: Deploy to Vercel Action
               uses: BetaHuhn/deploy-to-vercel-action@v1.10.0
@@ -72,6 +66,7 @@ jobs:
                   VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
                   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
                   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+                  PRODUCTION: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
                   PREBUILT: true
                   GITHUB_DEPLOYMENT: false
                   WORKING_DIRECTORY: ./project
