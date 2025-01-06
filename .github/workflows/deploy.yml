@@ -60,9 +60,10 @@ jobs:
               run: vercel build --token ${{ secrets.VERCEL_TOKEN }}
 
             - name: Debug Output Directory
-              working-directory: ./project
               run: |
-                  ls -la ./project/.vercel/output
+                  tree ./project
+                  tree ./project/vercel
+                  tree ./project/.vercel/output
 
             - name: Deploy to Vercel Action
               uses: shehroze-1122/deploy-to-vercel-action@v2.0.0
