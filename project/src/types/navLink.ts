@@ -1,4 +1,4 @@
-import type { IconName } from '@/lib/icons';
+import type { IconType } from 'react-icons';
 
 export interface InternalNavLinkType {
     text: string;
@@ -9,7 +9,7 @@ export interface InternalNavLinkType {
 }
 
 export interface ExternalNavLinkType extends InternalNavLinkType {
-    iconName: IconName;
+    iconName: IconType;
 }
 
 export type NavLinkType = InternalNavLinkType | ExternalNavLinkType;

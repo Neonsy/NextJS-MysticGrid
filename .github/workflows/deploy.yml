@@ -1,4 +1,4 @@
-name: Deploy to Vercel
+name: Host on Vercel
 
 on:
     pull_request:
@@ -9,16 +9,65 @@ on:
             - main
 
 jobs:
-    vercel:
+    host:
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout
+            - name: Wait for Main CI/CD
+              uses: fountainhead/action-wait-for-check@v1.2.0
+              with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  checkName: integrity-check
+                  intervalSeconds: 30
+                  timeoutSeconds: 600
+                  ref: ${{ github.event.pull_request.head.sha }}
+
+            - name: Checkout repository
               uses: actions/checkout@v4
+              with:
+                  token: ${{ secrets.ACTION_PAT }}
+
+            - name: Setup PNPM
+              uses: pnpm/action-setup@v4
+              with:
+                  version: latest
+
+            - name: Setup NodeJS
+              uses: actions/setup-node@v4
+              with:
+                  node-version-file: '/project/.node-version'
+                  cache: 'pnpm'
+                  cache-dependency-path: 'project/pnpm-lock.yaml'
+
+            - name: Install Dependencies
+              working-directory: ./project
+              run: pnpm install --frozen-lockfile
+
+            - name: Install Vercel CLI
+              run: pnpm add -g vercel
+
+            - name: Pull Vercel Environment (PR)
+              if: github.event_name == 'pull_request'
+              working-directory: ./project
+              run: vercel pull --yes --environment=preview --token ${{ secrets.VERCEL_TOKEN }}
+
+            - name: Pull Vercel Environment (Production)
+              if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+              working-directory: ./project
+              run: vercel pull --yes --environment=production --token ${{ secrets.VERCEL_TOKEN }}
+
+            - name: Build Project
+              working-directory: ./project
+              run: vercel build --token ${{ secrets.VERCEL_TOKEN }}
 
             - name: Deploy to Vercel Action
-              uses: shehroze-1122/deploy-to-vercel-action@v2.0.0
+              uses: BetaHuhn/deploy-to-vercel-action@v1.10.0
+
               with:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
                   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
                   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+                  PREBUILT: true
+                  GITHUB_DEPLOYMENT: false
+                  WORKING_DIRECTORY: ./project
+                  PR_LABELS: Deployed

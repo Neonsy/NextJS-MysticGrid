@@ -3,16 +3,58 @@
 @tailwind utilities;
 
 :root {
+    /* Body vars */
     --body-primary: 207deg 99% 9%;
 
-    --body-start: 222deg 55% 3%;
-    --body-middle: 207deg 99% 18%;
+    --body-start: 270deg 55% 3%;
+    --body-middle: 270deg 99% 18%;
     --body-end: 270deg 55% 3%;
 
+    /* Header vars */
     --header-primary: 222deg 55% 3%;
+
+    /* Footer vars */
     --footer-primary: 270deg 55% 3%;
 
+    /* Text vars */
     --text-primary: 0deg 0% 99%;
+
+    /* Scrollbar vars */
+    --track: 270deg 99% 90%;
+
+    --thumb: 270deg 75% 30%;
+    --thumb-hover: 270deg 75% 9%;
+
+    /* Gradient vars */
+    --gradient-logo-start: 179deg 100% 50%; /* cyan-500 */
+    --gradient-logo-middle: 234deg 89% 74%; /* indigo-400 */
+    --gradient-logo-end: 327deg 73% 70%; /* pink-400 */
+
+    /* Section Colors */
+    --color-play: 210deg 100% 81%;
+    --color-generate: 270deg 100% 81%;
+    --color-verify: 36deg 100% 81%;
+    --color-solve: 150deg 100% 81%;
+
+    /* Section Text Colors - for better contrast */
+    --color-play-text: 210deg 100% 54%;
+    --color-generate-text: 270deg 100% 54%;
+    --color-verify-text: 36deg 100% 45%;
+    --color-solve-text: 150deg 100% 27%;
+
+    /* Technology Brand Colors */
+    --color-typescript: 215deg 79% 66%; /* TypeScript blue */
+    --color-react: 193deg 95% 40%; /* React cyan */
+    --color-nextjs: 0deg 0% 100%; /* Next.js white */
+    --color-tailwind: 198deg 93% 60%; /* Tailwind cyan */
+    --color-framer: 271deg 81% 65%; /* Framer Motion purple */
+    --color-xstate: 255deg 85% 65%; /* XState violet */
+    --color-clerk: 214deg 100% 48%; /* Clerk blue */
+    --color-tanstack: 0deg 84% 60%; /* TanStack red */
+    --color-drizzle: 45deg 93% 47%; /* DrizzleORM yellow */
+    --color-turso: 142deg 70% 45%; /* Turso green */
+    --color-posthog: 24deg 94% 53%; /* PostHog orange */
+    --color-sentry: 354deg 100% 66%; /* Sentry red */
 }
 
 /* @media (prefers-color-scheme: light) {
@@ -20,6 +62,6 @@
     }
 } */
 
-* {
+:where(:not(svg, svg *)) {
     color: hsl(var(--text-primary));
 }
