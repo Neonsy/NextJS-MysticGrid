@@ -1,6 +1,10 @@
-import Hero from '@/components/app/home/sections/hero';
-
 import type { Metadata } from 'next';
+
+import Hero from '@/app/page/sections/hero';
+import Modes from '@/app/page/sections/modes';
+import MysticalPowers from '@/app/page/sections/mysticalPowers';
+import Container from '@/components/container';
+import Technologies from './page/sections/technologies';
 
 export const metadata: Metadata = {
     title: {
@@ -11,5 +15,12 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-    return <Hero />;
+    return (
+        <Container className='backdrop-blur-lg'>
+            <Hero />
+            <MysticalPowers />
+            <Modes />
+            <Technologies />
+        </Container>
+    );
 }

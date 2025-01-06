@@ -6,12 +6,12 @@ import Links from '@/components/links';
 
 export default function Footer() {
     return (
-        <footer className='border-y border-white/30 bg-footer bg-footer/50 py-3 backdrop-blur-lg'>
-            <Container className='flex flex-col items-center justify-center gap-y-4'>
+        <footer className='border-t border-white/30 bg-footer bg-footer/50 py-3 shadow-xl backdrop-blur-lg'>
+            <Container className='flex flex-col items-center justify-center gap-y-4 px-4'>
                 <div className='flex max-w-xl flex-col items-center justify-center gap-y-4'>
-                    <Links links={socialNav} className='flex items-center gap-x-9' />
+                    <Links links={socialNav} className='flex flex-wrap items-center justify-center gap-4 sm:gap-9' />
                 </div>
-                <Link href='https://github.com/neonsy' target='_blank' rel='noopener noreferrer' className='text-center text-lg'>
+                <Link href='https://github.com/neonsy' target='_blank' rel='noopener noreferrer' className='text-center text-base sm:text-lg'>
                     &copy; {new Date().getFullYear()} NeonSpace
                 </Link>
             </Container>

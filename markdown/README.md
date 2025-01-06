@@ -40,6 +40,9 @@ This project isn't just about solving puzzles - it's about crafting an engaging 
 - [DrizzleORM](https://orm.drizzle.team/)
 - [Turso](https://turso.tech/)
 
+- [Posthog](https://posthog.com/)
+- [Sentry](https://sentry.io/)
+
 ## Other
 
 More information about the project can be found [here](/markdown)
