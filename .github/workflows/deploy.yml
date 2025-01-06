@@ -1,4 +1,4 @@
-name: Deploy to Vercel
+name: Host on Vercel
 
 on:
     pull_request:
@@ -57,7 +57,7 @@ jobs:
                   retention-days: 7
                   overwrite: true
                   include-hidden-files: true
-    vercel:
+    deploy:
         runs-on: ubuntu-latest
         needs: build
         steps:
@@ -65,7 +65,7 @@ jobs:
               uses: actions/download-artifact@v4
               with:
                   name: build
-                  path: ${{ github.workspace }}/project/.vercel/output
+                  path: ${{ github.workspace }}/.vercel/output
                   github-token: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Deploy to Vercel Action
