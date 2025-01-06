@@ -76,11 +76,11 @@ jobs:
                   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
                   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
                   PREBUILT: true
-                  WORKING_DIRECTORY: ${{ github.workspace }}/project/.next/
+                  WORKING_DIRECTORY: ${{ github.workspace }}/.vercel/output
                   PR_LABELS: Deployed
 
             - name: Delete artifacts
               if: github.event_name == 'push' && github.ref == 'refs/heads/main'
               uses: geekyeggo/delete-artifact@v5
               with:
-                  name: build-output
+                  name: build
