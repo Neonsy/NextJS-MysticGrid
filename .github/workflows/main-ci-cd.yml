@@ -228,5 +228,5 @@ jobs:
               if: steps.build.outcome == 'success' && github.base_ref == 'main'
               with:
                   name: build-output
-                  path: project/.next
+                  path: ./project/.next
                   retention-days: 7
