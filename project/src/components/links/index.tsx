@@ -1,13 +1,13 @@
 import { NavLinkType, ExternalNavLinkType } from '@/types/navLink';
-import ExternalLinks from '@/components/links/external';
-import InternalLinks from '@/components/links/internal';
+import ExternalLinks from '@/components/links/ExternalLinks';
+import InternalLinks from '@/components/links/InternalLinks';
 
-type Props = {
+type Links = {
     links: NavLinkType[];
     className?: string;
 };
 
-export default function Links({ links, className }: Props) {
+export default function Links({ links, className }: Links) {
     return (
         <ul className={className}>
             {links.map((link) => (

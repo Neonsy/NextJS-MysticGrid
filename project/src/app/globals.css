@@ -29,6 +29,18 @@
     --gradient-logo-start: 179deg 100% 50%; /* cyan-500 */
     --gradient-logo-middle: 234deg 89% 74%; /* indigo-400 */
     --gradient-logo-end: 327deg 73% 70%; /* pink-400 */
+
+    /* Section Colors */
+    --color-play: 180deg 100% 81%;
+    --color-generate: 270deg 100% 81%;
+    --color-verify: 45deg 100% 81%;
+    --color-solve: 18deg 100% 81%;
+
+    /* Section Text Colors - for better contrast */
+    --color-play-text: 180deg 100% 63%;
+    --color-generate-text: 270deg 100% 63%;
+    --color-verify-text: 45deg 100% 63%;
+    --color-solve-text: 18deg 100% 63%;
 }
 
 /* @media (prefers-color-scheme: light) {
@@ -36,6 +48,6 @@
     }
 } */
 
-* {
+:where(:not(svg, svg *)) {
     color: hsl(var(--text-primary));
 }

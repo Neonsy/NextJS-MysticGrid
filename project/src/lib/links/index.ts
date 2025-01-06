@@ -1,4 +1,5 @@
 import type { NavLinkType } from '@/types/navLink';
+
 import { IconName } from '@/lib/icons';
 
 export const primaryNav: NavLinkType[] = [
