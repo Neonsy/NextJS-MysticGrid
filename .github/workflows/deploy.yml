@@ -47,6 +47,11 @@ jobs:
               working-directory: ./project
               run: pnpm run build
 
+            - name: Debug Directory Structure
+              run: |
+                  pwd
+                  ls -la project
+
             - name: Deploy to Vercel Action
               uses: shehroze-1122/deploy-to-vercel-action@v2.0.0
               with:
