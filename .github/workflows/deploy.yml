@@ -12,6 +12,9 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+              
             - name: Wait for Main CI/CD
               if: github.base_ref == 'main'
               uses: fountainhead/action-wait-for-check@v1.2.0
