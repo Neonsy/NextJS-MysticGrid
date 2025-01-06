@@ -1,3 +1,4 @@
+import GlassGrid from '@/app/page/sections/modes/GlassGrid';
 import Link from 'next/link';
 
 type ModeCardProps = {
@@ -36,10 +37,10 @@ export default function ModeCard({ title, description, ctaText, href, direction 
     return (
         <div className={`${variantStyles.container} px-24 py-8`}>
             <div className={`flex w-full items-center justify-center gap-x-64 ${direction === 'rtl' ? 'flex-row-reverse' : ''}`}>
-                <div className='aspect-square w-96 rounded-lg bg-white' />
+                <GlassGrid variant={variant} direction={direction} />
                 <div>
                     <h2 className={`mb-4 text-3xl font-bold ${variantStyles.title}`}>{title}</h2>
-                    <p className='mb-6 text-slate-400 max-w-lg'>{description}</p>
+                    <p className='mb-6 max-w-lg text-slate-400'>{description}</p>
                     <Link href={href} className={`${variantStyles.button} inline-block rounded-lg px-6 py-2 font-medium transition-colors`}>
                         {ctaText} →
                     </Link>

@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Hero() {
     return (
-        <section className='flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center bg-slate-950/75 px-8 py-16'>
+        <section className='flex flex-col items-center justify-center bg-slate-950/75 px-8 py-16'>
             <div className='flex flex-col items-center justify-center'>
                 <h1 className='bg-clip-text text-4xl font-bold'>Welcome to MysticGrid</h1>
                 <p className='mt-4 max-w-2xl text-center text-lg leading-relaxed text-gray-300/90'>
