@@ -27,6 +27,7 @@ jobs:
               with:
                   name: build
                   path: ${{ github.workspace }}/project/.next/
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Deploy to Vercel Action
               uses: shehroze-1122/deploy-to-vercel-action@v2.0.0
