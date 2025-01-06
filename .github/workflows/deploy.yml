@@ -65,7 +65,7 @@ jobs:
               uses: actions/download-artifact@v4
               with:
                   name: build
-                  path: ${{ github.workspace }}/.vercel/output
+                  path: ${{ github.workspace }}/project/.vercel/output
                   github-token: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Deploy to Vercel Action
