@@ -9,7 +9,7 @@ on:
             - main
 
 jobs:
-    deploy:
+    host:
         runs-on: ubuntu-latest
         steps:
             - name: Wait for Main CI/CD
@@ -42,15 +42,22 @@ jobs:
               working-directory: ./project
               run: pnpm install --frozen-lockfile
 
-            - name: Build
-              id: build
-              working-directory: ./project
-              run: pnpm run build
+            - name: Install Vercel CLI
+              run: pnpm add -g vercel
 
-            - name: Debug Directory Structure
-              run: |
-                  pwd
-                  ls -la project/.next/
+            - name: Pull Vercel Environment (PR)
+              if: github.event_name == 'pull_request'
+              working-directory: ./project
+              run: vercel pull --yes --environment=preview --token ${{ secrets.VERCEL_TOKEN }}
+
+            - name: Pull Vercel Environment (Production)
+              if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+              working-directory: ./project
+              run: vercel pull --yes --environment=production --token ${{ secrets.VERCEL_TOKEN }}
+
+            - name: Build Project
+              working-directory: ./project
+              run: vercel build --token ${{ secrets.VERCEL_TOKEN }}
 
             - name: Deploy to Vercel Action
               uses: shehroze-1122/deploy-to-vercel-action@v2.0.0
@@ -61,9 +68,3 @@ jobs:
                   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
                   PREBUILT: true
                   PR_LABELS: Deployed
-
-            - name: Delete artifacts
-              if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-              uses: geekyeggo/delete-artifact@v5
-              with:
-                  name: build
