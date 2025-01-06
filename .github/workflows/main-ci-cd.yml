@@ -218,9 +218,14 @@ jobs:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     build:
-        needs: integrity-check
-        if: github.event_name == 'pull_request' && github.base_ref == 'main'
         runs-on: ubuntu-latest
+
+        permissions:
+            contents: write
+            pull-requests: write
+
+        needs: integrity-check
+        # if: github.event_name == 'pull_request' && github.base_ref == 'main'
 
         steps:
             - name: Checkout repository
