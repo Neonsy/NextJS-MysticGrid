@@ -18,7 +18,7 @@ jobs:
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
                   checkName: integrity-check
-                  intervalSeconds: 60
+                  intervalSeconds: 30
                   timeoutSeconds: 600
                   ref: ${{ github.event.pull_request.head.sha }}
 
@@ -65,7 +65,7 @@ jobs:
               uses: actions/download-artifact@v4
               with:
                   name: build
-                  path: ${{ github.workspace }}/project/.next/
+                  path: ${{ github.workspace }}/.vercel/output
                   github-token: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Deploy to Vercel Action
