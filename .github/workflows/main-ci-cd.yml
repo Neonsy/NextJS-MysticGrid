@@ -225,9 +225,33 @@ jobs:
             pull-requests: write
 
         needs: integrity-check
-        if: github.event_name == 'pull_request' && github.base_ref == 'main'
+        # if: github.event.pull_request.base.ref == 'main' || github.event.pull_request.base.ref == 'Preview'
 
         steps:
+            - name: Debug Information
+              run: |
+                  echo "==== Pull Request Debug Info ===="
+                  echo "PR Base Branch: ${{ github.event.pull_request.base.ref }}"
+                  echo "PR Head Branch: ${{ github.event.pull_request.head.ref }}"
+                  echo "PR Number: ${{ github.event.pull_request.number }}"
+                  echo "Event Name: ${{ github.event_name }}"
+                  echo "Event Action: ${{ github.event.action }}"
+                  echo "Actor: ${{ github.actor }}"
+                  echo "Repository: ${{ github.repository }}"
+                  echo "==== Job Conditions ===="
+                  echo "Integrity Check Result: ${{ needs.integrity-check.result }}"
+                  echo "Condition Check: ${{ github.event.pull_request.base.ref == 'main' || github.event.pull_request.base.ref == 'Preview' }}"
+
+            - name: Dump GitHub context
+              env:
+                  GITHUB_CONTEXT: ${{ toJson(github) }}
+              run: echo "$GITHUB_CONTEXT"
+
+            - name: Dump job context
+              env:
+                  JOB_CONTEXT: ${{ toJson(job) }}
+              run: echo "$JOB_CONTEXT"
+
             - name: Checkout repository
               uses: actions/checkout@v4
               with:
