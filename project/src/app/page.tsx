@@ -4,6 +4,7 @@ import Hero from '@/app/page/sections/hero';
 import Modes from '@/app/page/sections/modes';
 import MysticalPowers from '@/app/page/sections/mysticalPowers';
 import Container from '@/components/container';
+import Technologies from './page/sections/technologies';
 
 export const metadata: Metadata = {
     title: {
@@ -19,6 +20,7 @@ export default function Home() {
             <Hero />
             <MysticalPowers />
             <Modes />
+            <Technologies />
         </Container>
     );
 }

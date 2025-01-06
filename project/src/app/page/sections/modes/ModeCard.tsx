@@ -1,4 +1,4 @@
-import GlassGrid from '@/app/page/sections/modes/GlassGrid';
+import Number from '@/app/page/sections/modes/NumberGrid';
 import Link from 'next/link';
 
 type ModeCardProps = {
@@ -14,30 +14,30 @@ export default function ModeCard({ title, description, ctaText, href, direction 
     const variantStyles = {
         play: {
             container: 'bg-slate-900/90',
-            title: 'text-play-text',
-            button: 'bg-play-text hover:bg-play/90',
+            title: 'text-modes-play-text',
+            button: 'bg-modes-play-text hover:bg-modes-play/90',
         },
         generate: {
             container: 'bg-slate-900/75',
-            title: 'text-generate-text',
-            button: 'bg-generate-text hover:bg-generate/90',
+            title: 'text-modes-generate-text',
+            button: 'bg-modes-generate-text hover:bg-modes-generate/90',
         },
         solve: {
             container: 'bg-slate-900/90',
-            title: 'text-solve-text',
-            button: 'bg-solve-text hover:bg-solve/90',
+            title: 'text-modes-solve-text',
+            button: 'bg-modes-solve-text hover:bg-modes-solve/90',
         },
         verify: {
             container: 'bg-slate-900/75',
-            title: 'text-verify-text',
-            button: 'bg-verify-text hover:bg-verify/90',
+            title: 'text-modes-verify-text',
+            button: 'bg-modes-verify-text hover:bg-modes-verify/90',
         },
     }[variant];
 
     return (
         <div className={`${variantStyles.container} px-24 py-8`}>
             <div className={`flex w-full items-center justify-center gap-x-64 ${direction === 'rtl' ? 'flex-row-reverse' : ''}`}>
-                <GlassGrid variant={variant} direction={direction} />
+                <Number variant={variant} direction={direction} />
                 <div>
                     <h2 className={`mb-4 text-3xl font-bold ${variantStyles.title}`}>{title}</h2>
                     <p className='mb-6 max-w-lg text-slate-400'>{description}</p>

@@ -1,6 +1,7 @@
 import type { NavLinkType } from '@/types/navLink';
 
-import { IconName } from '@/lib/icons';
+import { AiFillInstagram } from 'react-icons/ai';
+import { FaDiscord, FaGithub } from 'react-icons/fa';
 
 export const primaryNav: NavLinkType[] = [
     {
@@ -31,21 +32,21 @@ export const socialNav: NavLinkType[] = [
         href: 'https://www.instagram.com/neonsy01/',
         target: '_blank',
         rel: 'noopener noreferrer',
-        iconName: 'instagram' as IconName,
+        iconName: AiFillInstagram,
     },
     {
         text: 'github',
         href: 'https://github.com/neonsy',
         target: '_blank',
         rel: 'noopener noreferrer',
-        iconName: 'github' as IconName,
+        iconName: FaGithub,
     },
     {
         text: 'discord',
         href: 'https://discord.gg/aK3B9QyGU4',
         target: '_blank',
         rel: 'noopener noreferrer',
-        iconName: 'discord' as IconName,
+        iconName: FaDiscord,
     },
 ];
 
@@ -55,6 +56,6 @@ export const repositoryNav: NavLinkType[] = [
         href: 'https://github.com/Neonsy/NextJS-MysticGrid',
         target: '_blank',
         rel: 'noopener noreferrer',
-        iconName: 'github' as IconName,
+        iconName: FaGithub,
     },
 ];
