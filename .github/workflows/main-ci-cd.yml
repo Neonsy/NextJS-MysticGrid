@@ -226,16 +226,17 @@ jobs:
             - name: Debug - List build directory
               # if: steps.build.outcome == 'success' && github.base_ref == 'main'
               run: |
-                  ls -la ./project
-                  ls -la ./project/.next || echo "No .next directory found"
                   pwd
-                  find . -name ".next" -type d
+                  cd project
+                  pwd
+                  ls -la
 
             - name: Upload build artifacts
               uses: actions/upload-artifact@v4
               # if: steps.build.outcome == 'success' && github.base_ref == 'main'
               with:
                   name: build-output
-                  path: ${{ github.workspace }}/project/.next/**
+                  path: ${{ github.workspace }}/project/.next/
                   retention-days: 7
                   overwrite: true
+                  include-hidden-files: true
