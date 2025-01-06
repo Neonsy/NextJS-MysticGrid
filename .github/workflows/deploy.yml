@@ -62,7 +62,7 @@ jobs:
             - name: Debug Output Directory
               working-directory: ./project
               run: |
-                  ls -la /project/.vercel/output
+                  ls -la ./project/.vercel/output
 
             - name: Deploy to Vercel Action
               uses: shehroze-1122/deploy-to-vercel-action@v2.0.0
