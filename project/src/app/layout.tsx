@@ -20,29 +20,29 @@ export const metadata: Metadata = {
             follow: true,
         },
     },
-    // openGraph: {
-    //     type: 'website',
-    //     locale: 'en_US',
-    //     url: 'https://nextjs-mysticgrid.vercel.app/',
-    //     siteName: 'MysticGrid',
-    //     title: 'MysticGrid',
-    //     description: 'MysticGrid - A powerful grid-based game platform. Explore unique puzzles and challenges.',
-    //     images: [
-    //         {
-    //             url: '/og-image.png',
-    //             width: 1200,
-    //             height: 630,
-    //             alt: 'MysticGrid Preview',
-    //         },
-    //     ],
-    // },
-    // twitter: {
-    //     card: 'summary_large_image',
-    //     title: 'MysticGrid',
-    //     description: 'MysticGrid - A powerful grid-based game platform. Explore unique puzzles and challenges.',
-    //     images: ['/twitter-image.png'],
-    //     creator: '@DrNeonsy',
-    // },
+    openGraph: {
+        type: 'website',
+        locale: 'en_US',
+        url: 'https://nextjs-mysticgrid.vercel.app/',
+        siteName: 'MysticGrid',
+        title: 'MysticGrid',
+        description: 'MysticGrid - A powerful grid-based game platform. Explore unique puzzles and challenges.',
+        images: [
+            {
+                url: '/social-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'MysticGrid Preview',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'MysticGrid',
+        description: 'MysticGrid - A powerful grid-based game platform. Explore unique puzzles and challenges.',
+        images: ['/social-image.png'],
+        creator: '@DrNeonsy',
+    },
     icons: {
         icon: '/favicon.png',
     },
