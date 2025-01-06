@@ -16,11 +16,11 @@ export const metadata: Metadata = {
 
 export default function Home() {
     return (
-        <Container className='backdrop-blur-lg'>
+          <Container className='backdrop-blur-lg'>
             <Hero />
-            <MysticalPowers />
-            <Modes />
-            <Technologies />
+              <MysticalPowers />
+               <Modes />
+                <Technologies />
         </Container>
     );
 }
