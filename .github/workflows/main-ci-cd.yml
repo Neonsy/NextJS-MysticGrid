@@ -228,5 +228,7 @@ jobs:
               if: steps.build.outcome == 'success' && github.base_ref == 'main'
               with:
                   name: build-output
-                  path: ./project/.next
+                  path: ${{ github.workspace }}/project/.next/
                   retention-days: 7
+                  overwrite: true
+                  include-hidden-files: true

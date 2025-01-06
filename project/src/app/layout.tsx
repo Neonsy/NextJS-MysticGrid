@@ -10,6 +10,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+    metadataBase: new URL('https://nextjs-mysticgrid.vercel.app'),
     description: 'MysticGrid - A powerful grid-based game platform. Explore unique puzzles and challenges.',
     keywords: ['grid game', 'puzzle game', 'strategy', 'sudoku', 'sudoku web app', 'mystic grid'],
     robots: {

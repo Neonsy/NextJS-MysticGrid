@@ -20,14 +20,11 @@ jobs:
                   checkName: Upload build artifacts
                   ref: ${{ github.event.pull_request.head.sha }}
 
-            - name: Checkout
-              uses: actions/checkout@v4
-
             - name: Download build artifacts
               uses: actions/download-artifact@v4
               with:
-                  name: build-output
-                  path: project/.next
+                    name: build-output
+                    path: ${{ github.workspace }}/project/.next/
 
             - name: Deploy to Vercel Action
               uses: shehroze-1122/deploy-to-vercel-action@v2.0.0
@@ -37,7 +34,8 @@ jobs:
                   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
                   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
                   PREBUILT: true
-                  WORKING_DIRECTORY: project
+                  WORKING_DIRECTORY: ${{ github.workspace }}/project/.next/
+                  PR_LABELS: Deployed
 
             - name: Delete artifacts
               if: github.event_name == 'push' && github.ref == 'refs/heads/main'
