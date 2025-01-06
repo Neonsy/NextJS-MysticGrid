@@ -47,14 +47,14 @@
     --color-react: 193deg 95% 40%; /* React cyan */
     --color-nextjs: 0deg 0% 100%; /* Next.js white */
     --color-tailwind: 198deg 93% 60%; /* Tailwind cyan */
-    --color-framer: 271deg 81% 65%; /* Framer Motion purple */
-    --color-xstate: 255deg 85% 65%; /* XState violet */
-    --color-clerk: 214deg 100% 48%; /* Clerk blue */
+    --color-motion: 50deg 81% 65%; /* Motion yellow */
+    --color-xstate: 214deg 100% 48%; /* XState blue */
+    --color-clerk: 255deg 85% 65%; /* Clerk violet */
     --color-tanstack: 0deg 84% 60%; /* TanStack red */
     --color-drizzle: 45deg 93% 47%; /* DrizzleORM yellow */
     --color-turso: 142deg 70% 45%; /* Turso green */
     --color-posthog: 24deg 94% 53%; /* PostHog orange */
-    --color-sentry: 354deg 100% 66%; /* Sentry red */
+    --color-sentry: 0deg 0% 90%; /* Sentry white */
 }
 
 /* @media (prefers-color-scheme: light) {
