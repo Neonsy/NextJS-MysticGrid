@@ -1,15 +1,16 @@
 name: Deploy to Vercel
 
 on:
-    pull_request:
-        branches: main
-        types: [opened, reopened, synchronize]
-    push:
+    workflow_run:
+        workflows: ['Main CI/CD']
+        types:
+            - completed
         branches:
             - main
 
 jobs:
     vercel:
+        if: ${{ github.event.workflow_run.conclusion == 'success' }}
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
