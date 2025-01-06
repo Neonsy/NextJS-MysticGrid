@@ -17,14 +17,16 @@ jobs:
               uses: fountainhead/action-wait-for-check@v1.2.0
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
-                  checkName: Upload build artifacts
+                  checkName: build
+                  intervalSeconds: 30
+                  timeoutSeconds: 600
                   ref: ${{ github.event.pull_request.head.sha }}
 
             - name: Download build artifacts
               uses: actions/download-artifact@v4
               with:
-                    name: build-output
-                    path: ${{ github.workspace }}/project/.next/
+                  name: build-output
+                  path: ${{ github.workspace }}/project/.next/
 
             - name: Deploy to Vercel Action
               uses: shehroze-1122/deploy-to-vercel-action@v2.0.0
