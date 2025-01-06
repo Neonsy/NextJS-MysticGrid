@@ -60,7 +60,7 @@ jobs:
               run: vercel build --token ${{ secrets.VERCEL_TOKEN }}
 
             - name: Debug Project Directory
-              working-directory: ./project
+              working-directory: ./project/.vercel/
               run: ls -la
 
             - name: Deploy to Vercel Action
