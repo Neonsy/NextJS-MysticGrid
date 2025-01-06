@@ -1,4 +1,4 @@
-import Number from '@/app/page/sections/modes/NumberGrid';
+import NumberGrid from '@/app/page/sections/modes/NumberGrid';
 import Link from 'next/link';
 
 type ModeCardProps = {
@@ -38,7 +38,7 @@ export default function ModeCard({ title, description, ctaText, href, direction 
         <div className={`${variantStyles.container} px-6 py-24 sm:px-12 lg:px-32`}>
             <div
                 className={`flex w-full flex-col items-center justify-center lg:flex-row lg:gap-x-64 ${direction === 'rtl' ? 'lg:flex-row-reverse' : ''} gap-y-16`}>
-                <Number variant={variant} direction={direction} />
+                <NumberGrid variant={variant} direction={direction} />
                 <div className='text-center lg:text-left'>
                     <h2 className={`mb-6 text-2xl font-bold sm:text-3xl ${variantStyles.title}`}>{title}</h2>
                     <p className='mb-8 max-w-lg text-slate-400'>{description}</p>
