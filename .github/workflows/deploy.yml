@@ -50,7 +50,7 @@ jobs:
             - name: Debug Directory Structure
               run: |
                   pwd
-                  ls -la project
+                  ls -la project/.next/
 
             - name: Deploy to Vercel Action
               uses: shehroze-1122/deploy-to-vercel-action@v2.0.0
