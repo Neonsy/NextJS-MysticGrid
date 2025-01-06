@@ -5,10 +5,10 @@ import Link from 'next/link';
 
 export default function Nav() {
     return (
-        <nav className='flex items-center justify-evenly'>
+        <nav className='flex items-center justify-between'>
             <Link
                 href='/'
-                className='neon-text bg-gradient-to-r from-cyan-500 via-indigo-400 to-pink-400 bg-clip-text text-2xl font-bold text-transparent'>
+                className='from-gradient-logo-start via-gradient-logo-middle to-gradient-logo-end bg-gradient-to-r bg-clip-text text-2xl font-bold text-transparent'>
                 MysticGrid
             </Link>
             <Links links={primaryNav} className='flex items-center gap-x-9' />

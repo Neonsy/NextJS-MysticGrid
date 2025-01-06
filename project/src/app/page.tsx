@@ -1,4 +1,5 @@
-import Hero from '@/components/app/home/sections/hero';
+import Hero from '@/app/page/sections/hero';
+import Container from '@/components/container';
 
 import type { Metadata } from 'next';
 
@@ -11,5 +12,9 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-    return <Hero />;
+    return (
+        <Container className='backdrop-blur-lg'>
+            <Hero />
+        </Container>
+    );
 }

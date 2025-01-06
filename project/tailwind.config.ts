@@ -16,6 +16,11 @@ export default {
                 body: 'hsl(var(--body-primary) / <alpha-value>)',
                 header: 'hsl(var(--header-primary) / <alpha-value>)',
                 footer: 'hsl(var(--footer-primary) / <alpha-value>)',
+                gradient: {
+                    'logo-start': 'hsl(var(--gradient-logo-start) / <alpha-value>)',
+                    'logo-middle': 'hsl(var(--gradient-logo-middle) / <alpha-value>)',
+                    'logo-end': 'hsl(var(--gradient-logo-end) / <alpha-value>)',
+                },
             },
         },
     },

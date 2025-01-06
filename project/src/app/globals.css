@@ -24,6 +24,11 @@
 
     --thumb: 270deg 75% 30%;
     --thumb-hover: 270deg 75% 9%;
+
+    /* Gradient vars */
+    --gradient-logo-start: 179deg 100% 50%; /* cyan-500 */
+    --gradient-logo-middle: 234deg 89% 74%; /* indigo-400 */
+    --gradient-logo-end: 327deg 73% 70%; /* pink-400 */
 }
 
 /* @media (prefers-color-scheme: light) {
