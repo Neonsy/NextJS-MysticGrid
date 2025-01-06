@@ -9,19 +9,57 @@ on:
             - main
 
 jobs:
-    vercel:
+    build:
         runs-on: ubuntu-latest
+
         steps:
-            - name: Wait for build artifacts
-              if: github.event_name == 'pull_request' && github.base_ref == 'main'
+            - name: Wait for Main CI/CD
               uses: fountainhead/action-wait-for-check@v1.2.0
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
-                  checkName: build
-                  intervalSeconds: 30
+                  checkName: integrity-check
+                  intervalSeconds: 60
                   timeoutSeconds: 600
                   ref: ${{ github.event.pull_request.head.sha }}
 
+            - name: Checkout repository
+              uses: actions/checkout@v4
+              with:
+                  token: ${{ secrets.ACTION_PAT }}
+
+            - name: Setup PNPM
+              uses: pnpm/action-setup@v4
+              with:
+                  version: latest
+
+            - name: Setup NodeJS
+              uses: actions/setup-node@v4
+              with:
+                  node-version-file: '/project/.node-version'
+                  cache: 'pnpm'
+                  cache-dependency-path: 'project/pnpm-lock.yaml'
+
+            - name: Install Dependencies
+              working-directory: ./project
+              run: pnpm install --frozen-lockfile
+
+            - name: Build
+              id: build
+              working-directory: ./project
+              run: pnpm run build
+
+            - name: Upload build artifacts
+              uses: actions/upload-artifact@v4
+              if: steps.build.outcome == 'success'
+              with:
+                  name: build
+                  path: ${{ github.workspace }}/project/.next/
+                  retention-days: 7
+                  overwrite: true
+                  include-hidden-files: true
+    vercel:
+        runs-on: ubuntu-latest
+        steps:
             - name: Download build artifacts
               uses: actions/download-artifact@v4
               with:
