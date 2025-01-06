@@ -29,12 +29,12 @@ export default function FeatureCard({ title, description, icon: Icon, variant }:
 
     return (
         <div className='rounded-lg bg-slate-800 bg-opacity-10 p-6 backdrop-blur-sm transition-all hover:bg-opacity-20'>
-            <div className='flex items-start justify-between'>
+            <div className='flex items-start justify-between gap-6'>
                 <div>
                     <h3 className={`mb-2 text-2xl font-semibold ${variantStyles.text}`}>{title}</h3>
-                    <p className='text-slate-400'>{description}</p>
+                    <p className='max-w-sm text-slate-400'>{description}</p>
                 </div>
-                <Icon className={`text-3xl ${variantStyles.icon} self-center`} />
+                <Icon className={`text-3xl ${variantStyles.icon} shrink-0 self-center`} />
             </div>
         </div>
     );

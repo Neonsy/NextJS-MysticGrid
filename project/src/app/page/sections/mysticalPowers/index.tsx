@@ -30,9 +30,9 @@ export default function MysticalPowers() {
     ] as const;
 
     return (
-        <section className='bg-slate-900/75 py-16'>
-            <h2 className='mb-12 text-center text-4xl font-bold'>Mystical Powers</h2>
-            <div className='mx-auto grid max-w-6xl grid-cols-2 gap-6'>
+        <section className='bg-slate-900/75 py-12 sm:py-16'>
+            <h2 className='mb-8 text-center text-3xl font-bold sm:mb-12 sm:text-4xl'>Mystical Powers</h2>
+            <div className='mx-auto grid max-w-6xl grid-cols-1 gap-4 px-4 sm:gap-6 sm:px-6 md:grid-cols-2'>
                 {features.map((feature) => (
                     <FeatureCard key={feature.title} {...feature} />
                 ))}
