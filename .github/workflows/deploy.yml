@@ -25,7 +25,7 @@ jobs:
             - name: Download build artifacts
               uses: actions/download-artifact@v4
               with:
-                  name: build-output
+                  name: build
                   path: ${{ github.workspace }}/project/.next/
 
             - name: Deploy to Vercel Action
