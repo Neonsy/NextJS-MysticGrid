@@ -59,6 +59,8 @@ jobs:
             - name: Build Project
               working-directory: ./project
               run: vercel build --token ${{ secrets.VERCEL_TOKEN }}
+              env:
+                  VERCEL_ENV: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && 'production' || 'preview' }}
 
             - name: Deploy to Vercel Action
               uses: BetaHuhn/deploy-to-vercel-action@v1.10.0
