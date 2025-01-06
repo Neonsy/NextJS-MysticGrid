@@ -40,7 +40,7 @@ jobs:
 
             - id: add-label
               name: Add label on failure
-              if: env.failure == 'true'
+              if: hashFiles('failure_message.txt') != ''
               uses: buildsville/add-remove-label@v2.0.1
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
@@ -49,7 +49,7 @@ jobs:
 
             - id: comment-and-close-pr
               name: Comment and Close PR
-              if: env.failure == 'true'
+              if: hashFiles('failure_message.txt') != ''
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
@@ -189,13 +189,13 @@ jobs:
               id: check_changes
               run: |
                   if [[ -n $(git status --porcelain) ]]; then
-                    echo "has_changes=true" >> $GITHUB_ENV
+                    echo "has_changes=true" >> "$GITHUB_OUTPUT"
                   else
-                    echo "has_changes=false" >> $GITHUB_ENV
+                    echo "has_changes=false" >> "$GITHUB_OUTPUT"
                   fi
 
             - name: Commit and push changes
-              if: env.has_changes == 'true'
+              if: steps.check_changes.outputs.has_changes == 'true'
               run: |
                   git config --global user.name 'github-actions[bot]'
                   git config --global user.email 'github-actions[bot]@users.noreply.github.com'
