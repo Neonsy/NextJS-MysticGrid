@@ -7,7 +7,6 @@ import Header from '@/components/header';
 
 import './globals.css';
 
-
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
