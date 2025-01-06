@@ -219,15 +219,16 @@ jobs:
 
     build:
         runs-on: ubuntu-latest
-
-        permissions:
-            contents: write
-            pull-requests: write
-
         needs: integrity-check
         # if: github.event.pull_request.base.ref == 'main' || github.event.pull_request.base.ref == 'Preview'
 
         steps:
+            - name: Debug Build Job Condition
+              run: |
+                  echo "Base branch: ${{ github.event.pull_request.base.ref }}"
+                  echo "Head branch: ${{ github.event.pull_request.head.ref }}"
+                  echo "Should run?: ${{ github.event.pull_request.base.ref == 'main' || github.event.pull_request.base.ref == 'Preview' }}"
+
             - name: Debug Information
               run: |
                   echo "==== Pull Request Debug Info ===="
