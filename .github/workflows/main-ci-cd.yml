@@ -225,7 +225,7 @@ jobs:
             pull-requests: write
 
         needs: integrity-check
-        # if: github.event_name == 'pull_request' && github.base_ref == 'main'
+        if: github.event_name == 'pull_request' && github.base_ref == 'main'
 
         steps:
             - name: Checkout repository
