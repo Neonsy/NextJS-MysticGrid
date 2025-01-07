@@ -9,7 +9,7 @@ export default function Technologies() {
         { name: 'React', icon: FaReact, href: 'https://react.dev', color: 'react' },
         { name: 'Next.js', icon: SiNextdotjs, href: 'https://nextjs.org', color: 'nextjs' },
         { name: 'Tailwind', icon: SiTailwindcss, href: 'https://tailwindcss.com', color: 'tailwind' },
-        { name: 'Motion', icon: SiFramer, href: 'https://www.motion.dev', color: 'framer' },
+        { name: 'Motion', icon: SiFramer, href: 'https://www.motion.dev', color: 'motion' },
         { name: 'XState', icon: SiXstate, href: 'https://xstate.js.org', color: 'xstate' },
         { name: 'Clerk', icon: SiClerk, href: 'https://clerk.com', color: 'clerk' },
         { name: 'TanStack Query', icon: FaDatabase, href: 'https://tanstack.com/query', color: 'tanstack' },

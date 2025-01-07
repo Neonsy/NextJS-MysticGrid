@@ -14,7 +14,7 @@ export default function TechnologyCard({ name, icon: Icon, href, color }: Techno
             href={href}
             target='_blank'
             rel='noopener noreferrer'
-            className={`group relative flex items-center gap-2 rounded-lg border border-tech-${color} border-opacity-20 bg-tech-${color}/[0.1] p-4 backdrop-blur-lg transition-all duration-300 ease-in-out hover:scale-105 hover:border-opacity-100 hover:shadow-lg hover:shadow-tech-${color} active:scale-95`}>
+            className={`group relative flex items-center gap-2 rounded-lg border border-tech-${color} border-opacity-20 p-4 backdrop-blur-lg transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg active:scale-95`}>
             <Icon
                 className={`h-5 w-5 text-tech-${color} transition-transform duration-300 ease-in-out group-hover:scale-110 group-hover:animate-pulse`}
             />
@@ -23,7 +23,7 @@ export default function TechnologyCard({ name, icon: Icon, href, color }: Techno
             </span>
 
             <div
-                className={`absolute inset-0 -z-10 rounded-lg bg-tech-${color} opacity-0 blur transition-opacity duration-300 group-hover:opacity-20`}
+                className={`absolute inset-0 -z-10 rounded-lg bg-tech-${color} opacity-0 blur transition-opacity duration-300 group-hover:opacity-5`}
             />
         </Link>
     );
