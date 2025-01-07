@@ -1,4 +1,4 @@
-import ModeCard from '@/app/page/sections/modes/ModeCard';
+import ModeCard from '@/app/_page/sections/modes/ModeCard';
 
 export default function Modes() {
     return (

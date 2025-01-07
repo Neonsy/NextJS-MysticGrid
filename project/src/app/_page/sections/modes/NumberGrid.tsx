@@ -11,7 +11,7 @@ const getVariantColor = (variant: NumberProps['variant']) =>
         verify: 'bg-modes-verify-text/50',
     })[variant];
 
-export default function Number({ variant, direction = 'ltr' }: NumberProps) {
+export default function NumberGrid({ variant, direction = 'ltr' }: NumberProps) {
     const numbers = [...Array(9)].map((_, i) => i + 1).sort(() => Math.random() - 0.5);
 
     return (

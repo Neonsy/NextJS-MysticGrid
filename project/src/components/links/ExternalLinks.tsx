@@ -9,7 +9,7 @@ type ExternalLinksProps = {
 export default function ExternalLinks({ link }: ExternalLinksProps) {
     return (
         <Link href={link.href} target={link.target} rel={link.rel}>
-            <link.iconName className='h-5 w-5' />
+            <link.iconName className='~text-xl/3xl' />
         </Link>
     );
 }

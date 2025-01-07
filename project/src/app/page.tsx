@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 
-import Hero from '@/app/page/sections/hero';
-import Modes from '@/app/page/sections/modes';
-import MysticalPowers from '@/app/page/sections/mysticalPowers';
+import Hero from '@/app/_page/sections/hero';
+import Modes from '@/app/_page/sections/modes';
+import MysticalPowers from '@/app/_page/sections/mysticalPowers';
 import Container from '@/components/container';
-import Technologies from './page/sections/technologies';
+import Technologies from './_page/sections/technologies';
 
 export const metadata: Metadata = {
     title: {
