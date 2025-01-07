@@ -9,7 +9,7 @@ export default function Header() {
         <motion.header
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className='bg-header/60 sticky top-0 z-50 border-b border-white/30 py-6 shadow-lg backdrop-blur-lg'>
+            className='sticky top-0 z-50 border-b border-white/30 bg-header/60 py-6 shadow-lg backdrop-blur-lg'>
             <Container>
                 <Nav />
             </Container>
