@@ -1,4 +1,4 @@
-import FeatureCard from '@/app/page/sections/mysticalPowers/FeatureCard';
+import FeatureCard from '@/app/_page/sections/mysticalPowers/FeatureCard';
 import { FaBrain, FaCheckCircle, FaMagic, FaPlay } from 'react-icons/fa';
 
 export default function MysticalPowers() {

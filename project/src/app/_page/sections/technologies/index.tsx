@@ -1,7 +1,7 @@
 import { FaDatabase, FaReact } from 'react-icons/fa';
 import { SiClerk, SiDatabricks, SiDrizzle, SiFramer, SiNextdotjs, SiPosthog, SiSentry, SiTailwindcss, SiTypescript, SiXstate } from 'react-icons/si';
 
-import TechnologyCard from '@/app/page/sections/technologies/TechnologyCard';
+import TechnologyCard from '@/app/_page/sections/technologies/TechnologyCard';
 
 export default function Technologies() {
     const technologies = [

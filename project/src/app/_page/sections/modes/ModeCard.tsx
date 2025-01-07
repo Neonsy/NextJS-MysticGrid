@@ -1,4 +1,4 @@
-import NumberGrid from '@/app/page/sections/modes/NumberGrid';
+import NumberGrid from '@/app/_page/sections/modes/NumberGrid';
 import Link from 'next/link';
 
 type ModeCardProps = {
