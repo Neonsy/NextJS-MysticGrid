@@ -1,7 +1,7 @@
 import { FaDatabase, FaReact } from 'react-icons/fa';
 import { SiClerk, SiDatabricks, SiDrizzle, SiFramer, SiNextdotjs, SiPosthog, SiSentry, SiTailwindcss, SiTypescript, SiXstate } from 'react-icons/si';
 
-import TechnologyCard from '@/app/page/sections/technologies/TechnologyCard';
+import TechnologyCard from '@/app/_page/sections/technologies/TechnologyCard';
 
 export default function Technologies() {
     const technologies = [
@@ -21,8 +21,8 @@ export default function Technologies() {
 
     return (
         <section className='flex flex-col items-center justify-center gap-6 bg-slate-950/75 px-8 py-16 sm:gap-8 sm:px-16 sm:py-24'>
-            <h2 className='text-center text-3xl font-bold sm:text-4xl'>Arcane Technologies</h2>
-            <div className='grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 md:grid-cols-3 lg:grid-cols-4'>
+            <h2 className='text-center font-bold ~text-3xl/4xl'>Arcane Technologies</h2>
+            <div className='mx-auto grid w-full max-w-[theme(screens.xs)] grid-cols-1 gap-3 sm:max-w-[theme(screens.sm)] sm:gap-4 md:max-w-[theme(screens.md)] md:grid-cols-2 lg:max-w-[theme(screens.lg)] lg:grid-cols-3 xl:max-w-[theme(screens.xl)] xl:grid-cols-4'>
                 {technologies.map((tech) => (
                     <TechnologyCard key={tech.name} {...tech} />
                 ))}

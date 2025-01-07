@@ -1,6 +1,5 @@
 import type { Config } from 'tailwindcss';
-
-import fluid, { extract } from 'fluid-tailwind';
+import fluid, { extract, screens, fontSize } from 'fluid-tailwind';
 import forms from '@tailwindcss/forms';
 import plugin from 'tailwindcss/plugin';
 
@@ -11,17 +10,8 @@ export default {
     },
 
     theme: {
-        screens: {
-            xs: '320px',
-            sm: '375px',
-            md: '768px',
-            lg: '1024px',
-            xl: '1280px',
-            '2xl': '1536px',
-            '3xl': '1920px',
-            '4xl': '2560px',
-            '5xl': '3840px',
-        },
+        screens,
+        fontSize,
         extend: {
             colors: {
                 body: 'hsl(var(--body-primary) / <alpha-value>)',
@@ -47,7 +37,7 @@ export default {
                     react: 'hsl(var(--color-react) / <alpha-value>)',
                     nextjs: 'hsl(var(--color-nextjs) / <alpha-value>)',
                     tailwind: 'hsl(var(--color-tailwind) / <alpha-value>)',
-                    framer: 'hsl(var(--color-framer) / <alpha-value>)',
+                    motion: 'hsl(var(--color-motion) / <alpha-value>)',
                     xstate: 'hsl(var(--color-xstate) / <alpha-value>)',
                     clerk: 'hsl(var(--color-clerk) / <alpha-value>)',
                     tanstack: 'hsl(var(--color-tanstack) / <alpha-value>)',
@@ -56,6 +46,17 @@ export default {
                     posthog: 'hsl(var(--color-posthog) / <alpha-value>)',
                     sentry: 'hsl(var(--color-sentry) / <alpha-value>)',
                 },
+            },
+            screens: {
+                xs: '20rem', // 320px
+                sm: '23.4375rem', // 375px
+                md: '48rem', // 768px
+                lg: '64rem', // 1024px
+                xl: '80rem', // 1280px
+                '2xl': '96rem', // 1536px
+                '3xl': '120rem', // 1920px
+                '4xl': '160rem', // 2560px
+                '5xl': '240rem', // 3840px
             },
         },
     },
@@ -116,8 +117,8 @@ export default {
         'bg-tech-nextjs',
         'text-tech-tailwind',
         'bg-tech-tailwind',
-        'text-tech-framer',
-        'bg-tech-framer',
+        'text-tech-motion',
+        'bg-tech-motion',
         'text-tech-xstate',
         'bg-tech-xstate',
         'text-tech-clerk',

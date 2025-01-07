@@ -28,13 +28,13 @@ export default function FeatureCard({ title, description, icon: Icon, variant }:
     }[variant];
 
     return (
-        <div className='rounded-lg bg-slate-800 bg-opacity-10 p-6 backdrop-blur-sm transition-all hover:bg-opacity-20'>
-            <div className='flex items-start justify-between gap-6'>
+        <div className='rounded-lg bg-slate-800 bg-opacity-10 p-4 backdrop-blur-sm transition-all hover:bg-opacity-20 sm:p-6'>
+            <div className='flex items-start justify-between gap-4 sm:gap-6'>
                 <div>
-                    <h3 className={`mb-2 text-2xl font-semibold ${variantStyles.text}`}>{title}</h3>
-                    <p className='max-w-sm text-slate-400'>{description}</p>
+                    <h3 className={`mb-2 font-semibold ${variantStyles.text} ~text-xl/5xl`}>{title}</h3>
+                    <p className='max-w-sm text-slate-400 ~text-sm/base'>{description}</p>
                 </div>
-                <Icon className={`text-3xl ${variantStyles.icon} shrink-0 self-center`} />
+                <Icon className={`shrink-0 self-center ${variantStyles.icon} ~text-2xl/5xl`} />
             </div>
         </div>
     );

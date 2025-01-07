@@ -65,11 +65,13 @@ jobs:
                       > **Commit:** \`${context.sha.substring(0, 7)}\`
 
                       ### Deployment Links
-                      ✨ **Preview:** [Visit Preview](${deployUrl})
-                      🔍 **Inspect:** [View Details](${inspectUrl})
+                      | Type | Link |
+                      |:--|:--|
+                      | ✨ **Preview** | [See your changes in action!](${deployUrl}) |
+                      | 🔍 **Inspect** | [Peek under the hood](${inspectUrl}) |
 
                       ---
-                      ###💫 Deployed through GitHub Actions 😎`;
+                      ### 💫 Deployed through GitHub Actions 😎`;
 
                       await github.rest.issues.createComment({
                         owner: context.repo.owner,
