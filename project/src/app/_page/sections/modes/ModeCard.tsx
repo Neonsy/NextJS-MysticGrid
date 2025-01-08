@@ -45,16 +45,7 @@ export default function ModeCard({ title, description, ctaText, href, direction 
                     <Link
                         href={href}
                         className={` ${variantStyles.button} group relative inline-flex items-center justify-center rounded-lg px-8 py-3.5 text-base font-semibold tracking-wide transition-all duration-300 before:absolute before:inset-0 before:origin-left before:scale-x-0 before:rounded-lg before:bg-white/10 before:transition-transform before:duration-300 hover:scale-105 hover:before:scale-x-100 active:scale-95 sm:px-10 sm:py-4 sm:text-lg`}>
-                        <span className='relative flex items-center gap-2'>
-                            {ctaText}
-                            <svg
-                                className='h-4 w-4 transition-transform duration-300 group-hover:translate-x-1'
-                                fill='none'
-                                viewBox='0 0 24 24'
-                                stroke='currentColor'>
-                                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M14 5l7 7m0 0l-7 7m7-7H3' />
-                            </svg>
-                        </span>
+                        {ctaText}
                     </Link>
                 </div>
             </div>
