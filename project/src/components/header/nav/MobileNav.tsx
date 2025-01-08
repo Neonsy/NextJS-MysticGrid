@@ -64,7 +64,7 @@ export default function MobileNav() {
                                     duration: 0.15,
                                     delay: 0.2,
                                 }}>
-                                <p className='text-sm text-white/60'>Project Repository</p>
+                                <p className='text-sm'>Project Repository</p>
                                 <Links links={repositoryNav} className='flex items-center justify-center gap-4 text-2xl' />
                             </motion.div>
                         </div>

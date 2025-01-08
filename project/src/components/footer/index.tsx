@@ -37,7 +37,11 @@ export default function Footer() {
                             duration: 0.3,
                             delay: 0.3,
                         }}>
-                        <Link href='https://github.com/neonsy' target='_blank' rel='noopener noreferrer' className='text-center text-base sm:text-lg'>
+                        <Link
+                            href='https://github.com/neonsy'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className='text-center text-base hover:underline sm:text-lg'>
                             &copy; {new Date().getFullYear()} NeonSpace
                         </Link>
                     </motion.div>

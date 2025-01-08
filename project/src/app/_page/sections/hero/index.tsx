@@ -20,7 +20,7 @@ export default function Hero() {
                         duration: 0.15,
                         delay: 0.2,
                     }}
-                    className='bg-clip-text text-center font-bold ~text-5xl/8xl'>
+                    className='bg-clip-text text-center font-bold ~text-6xl/8xl'>
                     Welcome to the MysticGrid
                 </motion.h1>
                 <motion.p
@@ -31,7 +31,7 @@ export default function Hero() {
                         duration: 0.3,
                         delay: 0.3,
                     }}
-                    className='max-w-2xl text-center text-gray-300/90 ~text-base/xl ~mt-8/32 ~px-4/8'>
+                    className='max-w-2xl text-center ~text-lg/xl ~mt-8/32 ~px-4/8'>
                     Discover the ancient art of Sudoku reimagined - where numbers meet mysticism in an enchanting puzzle experience.
                 </motion.p>
             </div>
@@ -66,7 +66,7 @@ export default function Hero() {
                     }}>
                     <Link
                         href='/play'
-                        className='group relative inline-block overflow-hidden rounded-lg border border-white/20 bg-slate-900/40 font-semibold text-white/90 shadow-[0_4px_12px_rgba(255,255,255,0.08)] backdrop-blur-sm transition-all duration-300 ~text-base/lg ~mt-8/16 ~p-3/6 before:absolute before:inset-0 before:-z-10 before:translate-y-[100%] before:bg-white/10 before:transition-transform before:duration-300 hover:border-white/30 hover:shadow-[0_8px_24px_rgba(255,255,255,0.12)] hover:before:translate-y-0 focus:outline-none focus:ring-2 focus:ring-white/30 focus:ring-offset-2 focus:ring-offset-slate-950 active:translate-y-[1px]'>
+                        className='group relative inline-block overflow-hidden rounded-lg border border-white/20 bg-slate-900/40 font-semibold shadow-[0_4px_12px_rgba(255,255,255,0.08)] backdrop-blur-sm transition-all duration-300 ~text-base/lg ~mt-8/16 ~p-3/6 before:absolute before:inset-0 before:-z-10 before:translate-y-[100%] before:bg-white/10 before:transition-transform before:duration-300 hover:border-white/30 hover:shadow-[0_8px_24px_rgba(255,255,255,0.12)] hover:before:translate-y-0 focus:outline-none focus:ring-2 focus:ring-white/30 focus:ring-offset-2 focus:ring-offset-slate-950 active:translate-y-[1px]'>
                         Begin Your Quest
                     </Link>
                 </motion.div>
@@ -100,7 +100,7 @@ export default function Hero() {
                     }}>
                     <Link
                         href='#explore'
-                        className='group relative inline-block overflow-hidden rounded-lg border border-white/20 bg-slate-900/40 font-semibold text-white/90 shadow-[0_4px_12px_rgba(255,255,255,0.08)] backdrop-blur-sm transition-all duration-300 ~text-base/lg ~mt-8/16 ~p-3/6 before:absolute before:inset-0 before:-z-10 before:translate-y-[100%] before:bg-white/10 before:transition-transform before:duration-300 hover:border-white/30 hover:shadow-[0_8px_24px_rgba(255,255,255,0.12)] hover:before:translate-y-0 focus:outline-none focus:ring-2 focus:ring-white/30 focus:ring-offset-2 focus:ring-offset-slate-950 active:translate-y-[1px]'>
+                        className='group relative inline-block overflow-hidden rounded-lg border border-white/20 bg-slate-900/40 font-semibold shadow-[0_4px_12px_rgba(255,255,255,0.08)] backdrop-blur-sm transition-all duration-300 ~text-base/lg ~mt-8/16 ~p-3/6 before:absolute before:inset-0 before:-z-10 before:translate-y-[100%] before:bg-white/10 before:transition-transform before:duration-300 hover:border-white/30 hover:shadow-[0_8px_24px_rgba(255,255,255,0.12)] hover:before:translate-y-0 focus:outline-none focus:ring-2 focus:ring-white/30 focus:ring-offset-2 focus:ring-offset-slate-950 active:translate-y-[1px]'>
                         Explore Possibilities
                     </Link>
                 </motion.div>

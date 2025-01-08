@@ -86,7 +86,7 @@ export default function FeatureCard({ title, description, icon: Icon, variant, a
                     duration: 0.12,
                     delay: 0.4 + animationDelay,
                 }}
-                className='max-w-[75%] text-slate-400 ~text-base/lg lg:max-w-full'>
+                className='max-w-[75%] ~text-base/lg lg:max-w-full'>
                 {description}
             </motion.p>
         </motion.div>
