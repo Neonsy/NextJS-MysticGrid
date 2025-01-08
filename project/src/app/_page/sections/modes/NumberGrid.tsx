@@ -28,18 +28,21 @@ export default function NumberGrid({ variant, direction = 'ltr', shouldAnimate =
 
     return (
         <motion.div
-            initial={{ opacity: 0, x: direction === 'rtl' ? 50 : -50 }}
+            initial={{ opacity: 0, x: direction === 'rtl' ? 25 : -25 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className='flex items-center justify-center'>
+            className='flex items-center justify-center p-4'>
             <motion.div
                 initial={{ scale: 0.9 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                style={{ transform: `perspective(500px) rotateY(${direction === 'rtl' ? '10deg' : '-10deg'})` }}
-                className={`relative rounded-lg bg-slate-900/45 p-2 shadow-[0_0_15px_rgba(0,0,0,0.5)] backdrop-blur-md`}>
+                style={{
+                    transform: `perspective(500px) rotateY(${direction === 'rtl' ? '10deg' : '-10deg'})`,
+                    transformOrigin: 'center center',
+                }}
+                className='relative rounded-lg bg-slate-900/45 p-2 shadow-[0_0_15px_rgba(0,0,0,0.5)] backdrop-blur-md'>
                 <div className={`grid h-[270px] w-[270px] grid-cols-3 gap-[1.5px] lg:h-[369px] lg:w-[369px] ${getVariantColor(variant)}`}>
                     {numbers.map((number, index) => (
                         <motion.div
