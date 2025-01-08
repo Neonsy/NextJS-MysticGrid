@@ -19,11 +19,11 @@ export default function NumberGrid({ variant, direction = 'ltr' }: NumberProps) 
             <div
                 style={{ transform: `perspective(500px) rotateY(${direction === 'rtl' ? '10deg' : '-10deg'})` }}
                 className={`relative rounded-lg bg-slate-900/45 p-2 shadow-[0_0_15px_rgba(0,0,0,0.5)] backdrop-blur-md`}>
-                <div className={`grid h-[300px] w-[300px] grid-cols-3 gap-[1.5px] ${getVariantColor(variant)}`}>
+                <div className={`grid h-[270px] w-[270px] grid-cols-3 gap-[1.5px] lg:h-[369px] lg:w-[369px] ${getVariantColor(variant)}`}>
                     {numbers.map((number, index) => (
                         <div
                             key={index}
-                            className='flex aspect-square select-none items-center justify-center rounded-sm bg-slate-950/90 text-2xl font-bold'>
+                            className='flex aspect-square select-none items-center justify-center rounded-sm bg-slate-950/90 ~text-3xl/5xl'>
                             {number}
                         </div>
                     ))}
