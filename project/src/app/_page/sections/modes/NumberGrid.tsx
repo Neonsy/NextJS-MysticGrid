@@ -31,7 +31,18 @@ export default function NumberGrid({ variant, direction = 'ltr', shouldAnimate =
             initial={{ opacity: 0, x: direction === 'rtl' ? 25 : -25 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            animate={{
+                y: [0, -10, 0],
+            }}
+            transition={{
+                y: {
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                },
+                opacity: { duration: 0.5, delay: 0.2 },
+                x: { duration: 0.5, delay: 0.2 },
+            }}
             className='flex items-center justify-center p-4'>
             <motion.div
                 initial={{ scale: 0.9 }}
@@ -47,12 +58,8 @@ export default function NumberGrid({ variant, direction = 'ltr', shouldAnimate =
                     {numbers.map((number, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, scale: 0.5 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
                             transition={{
-                                duration: 0.3,
-                                delay: 0.4 + index * 0.05,
+                                duration: 0.2,
                                 type: 'spring',
                                 stiffness: 260,
                                 damping: 20,
