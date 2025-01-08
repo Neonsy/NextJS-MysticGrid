@@ -59,6 +59,7 @@ export default function NumberGrid({ variant, direction = 'ltr', shouldAnimate =
                             }}
                             whileHover={{ scale: 1.036 }}
                             whileTap={{ scale: 0.9 }}
+                            tabIndex={-1}
                             className='flex aspect-square select-none items-center justify-center rounded-sm bg-slate-950/90 ~text-3xl/5xl'>
                             {number}
                         </motion.div>

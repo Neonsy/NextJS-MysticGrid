@@ -9,7 +9,7 @@ import MobileNav from '@/components/header/nav/MobileNav';
 export default function Nav() {
     return (
         <nav className='flex items-center justify-between px-4 sm:px-8'>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} tabIndex={-1}>
                 <Link
                     href='/'
                     className='bg-gradient-to-r from-gradient-logo-start via-gradient-logo-middle to-gradient-logo-end bg-clip-text text-2xl font-bold text-transparent'>

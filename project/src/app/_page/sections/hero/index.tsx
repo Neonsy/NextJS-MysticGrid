@@ -53,6 +53,7 @@ export default function Hero() {
                         y: -8,
                     }}
                     whileTap={{ scale: 0.95 }}
+                    tabIndex={-1}
                     transition={{
                         opacity: { duration: 0.2, delay: 0.4 },
                         scale: { duration: 0.2 },
@@ -86,6 +87,7 @@ export default function Hero() {
                         y: -8,
                     }}
                     whileTap={{ scale: 0.95 }}
+                    tabIndex={-1}
                     transition={{
                         opacity: { duration: 0.2, delay: 0.5 },
                         scale: { duration: 0.2 },
