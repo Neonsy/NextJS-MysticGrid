@@ -1,13 +1,17 @@
+'use client';
+
 import type { IconType } from 'react-icons';
+import { motion } from 'motion/react';
 
 interface FeatureCardProps {
     title: string;
     description: string;
     icon: IconType;
     variant: 'play' | 'generate' | 'solve' | 'verify';
+    animationDelay?: number;
 }
 
-export default function FeatureCard({ title, description, icon: Icon, variant }: FeatureCardProps) {
+export default function FeatureCard({ title, description, icon: Icon, variant, animationDelay = 0 }: FeatureCardProps) {
     const variantStyles = {
         play: {
             text: 'text-modes-play-text',
@@ -28,14 +32,63 @@ export default function FeatureCard({ title, description, icon: Icon, variant }:
     }[variant];
 
     return (
-        <div className='rounded-lg bg-slate-800 bg-opacity-10 p-4 backdrop-blur-sm transition-all hover:bg-opacity-20 sm:p-6'>
-            <div className='flex items-start justify-between gap-4 sm:gap-6'>
-                <div>
-                    <h3 className={`mb-2 font-semibold ${variantStyles.text} ~text-xl/5xl`}>{title}</h3>
-                    <p className='max-w-sm text-slate-400 ~text-sm/base'>{description}</p>
-                </div>
-                <Icon className={`shrink-0 self-center ${variantStyles.icon} ~text-2xl/5xl`} />
+        <motion.div
+            initial={{ opacity: 0, scale: 1 }}
+            whileInView={{
+                opacity: 1,
+            }}
+            viewport={{ once: true }}
+            transition={{
+                duration: 0.3,
+                delay: 0.2 + animationDelay,
+                ease: 'easeOut',
+                scale: {
+                    duration: 0,
+                    ease: 'easeOut',
+                },
+            }}
+            whileHover={{
+                scale: 1.02,
+                transition: {
+                    duration: 0,
+                    ease: 'easeIn',
+                },
+            }}
+            className='rounded-lg bg-slate-800 bg-opacity-10 backdrop-blur-sm transition-all ~mb-4/8 ~p-4/8 hover:bg-opacity-20'>
+            <div className='flex items-center justify-between ~mb-4/8'>
+                <motion.h3
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        duration: 0.2,
+                        delay: 0.3 + animationDelay,
+                    }}
+                    className={`font-semibold ${variantStyles.text} ~text-3xl/6xl`}>
+                    {title}
+                </motion.h3>
+                <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        duration: 0.5,
+                        delay: 0.2 + animationDelay,
+                    }}>
+                    <Icon className={`${variantStyles.icon} ~text-3xl/5xl`} />
+                </motion.div>
             </div>
-        </div>
+            <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                    duration: 0.12,
+                    delay: 0.4 + animationDelay,
+                }}
+                className='max-w-[75%] ~text-base/lg lg:max-w-full'>
+                {description}
+            </motion.p>
+        </motion.div>
     );
 }

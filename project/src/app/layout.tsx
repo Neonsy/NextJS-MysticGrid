@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
 
-import './globals.css';
+import '@/globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -55,7 +55,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang='en'>
+        <html lang='en' className='scroll-smooth'>
             <body className={`${inter.className} bg-body-backdrop antialiased`}>
                 <div className='flex min-h-dvh flex-col'>
                     <Header />

@@ -1,8 +1,16 @@
+'use client';
+
 import ModeCard from '@/app/_page/sections/modes/ModeCard';
+import { motion } from 'motion/react';
 
 export default function Modes() {
     return (
-        <section>
+        <motion.section
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className='backdrop-blur-sm'>
             <ModeCard
                 title='Play Mode'
                 description='Challenge yourself in our mystical Sudoku chambers, where puzzles of varying difficulties await. From gentle whispers to mind bending enigmas, test your skills and grow stronger with each solved grid.'
@@ -38,6 +46,6 @@ export default function Modes() {
                 direction='rtl'
                 variant='verify'
             />
-        </section>
+        </motion.section>
     );
 }

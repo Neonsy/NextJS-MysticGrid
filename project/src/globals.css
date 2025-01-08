@@ -18,6 +18,7 @@
 
     /* Text vars */
     --text-primary: 0deg 0% 99%;
+    --text-secondary: 210deg 20% 75%;
 
     /* Scrollbar vars */
     --track: 270deg 99% 90%;
@@ -64,4 +65,8 @@
 
 :where(:not(svg, svg *)) {
     color: hsl(var(--text-primary));
+}
+
+p {
+    color: hsl(var(--text-secondary));
 }
