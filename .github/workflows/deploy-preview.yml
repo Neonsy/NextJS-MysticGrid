@@ -1,7 +1,7 @@
 name: Deploy Preview
 on:
     pull_request:
-        branches: main
+        branches: Preview
         types: [opened, reopened, synchronize]
 
 env:
@@ -15,7 +15,6 @@ jobs:
 
         steps:
             - name: Wait for Main CI/CD
-              if: github.base_ref == 'main'
               uses: fountainhead/action-wait-for-check@v1.2.0
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
