@@ -2,7 +2,7 @@ import ModeCard from '@/app/_page/sections/modes/ModeCard';
 
 export default function Modes() {
     return (
-        <section>
+        <section className='backdrop-blur-sm'>
             <ModeCard
                 title='Play Mode'
                 description='Challenge yourself in our mystical Sudoku chambers, where puzzles of varying difficulties await. From gentle whispers to mind bending enigmas, test your skills and grow stronger with each solved grid.'

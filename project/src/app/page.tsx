@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
     return (
-        <Container className='backdrop-blur-lg'>
+        <Container>
             <Hero />
             <MysticalPowers />
             <Modes />
