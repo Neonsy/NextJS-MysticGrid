@@ -1,5 +1,8 @@
+'use client';
+
 import { FaDatabase, FaReact } from 'react-icons/fa';
 import { SiClerk, SiDatabricks, SiDrizzle, SiFramer, SiNextdotjs, SiPosthog, SiSentry, SiTailwindcss, SiTypescript, SiXstate } from 'react-icons/si';
+import { motion } from 'motion/react';
 
 import TechnologyCard from '@/app/_page/sections/technologies/TechnologyCard';
 
@@ -20,13 +23,25 @@ export default function Technologies() {
     ];
 
     return (
-        <section className='flex flex-col items-center justify-center bg-slate-950/75 backdrop-blur-sm ~gap-6/16 ~px-8/16 ~py-16/32'>
-            <h2 className='text-center font-bold ~text-3xl/4xl'>Arcane Technologies</h2>
+        <motion.section
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.2 }}
+            className='flex flex-col items-center justify-center bg-slate-950/75 backdrop-blur-sm ~gap-6/16 ~px-8/16 ~py-16/32'>
+            <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.2 }}
+                className='text-center font-bold ~text-4xl/7xl'>
+                Arcane Technologies
+            </motion.h2>
             <div className='mx-auto grid w-full max-w-[theme(screens.xs)] grid-cols-1 gap-3 sm:max-w-[theme(screens.sm)] sm:gap-4 md:max-w-[theme(screens.md)] md:grid-cols-2 lg:max-w-[theme(screens.lg)] lg:grid-cols-3 xl:max-w-[theme(screens.xl)] xl:grid-cols-4'>
                 {technologies.map((tech) => (
                     <TechnologyCard key={tech.name} {...tech} />
                 ))}
             </div>
-        </section>
+        </motion.section>
     );
 }

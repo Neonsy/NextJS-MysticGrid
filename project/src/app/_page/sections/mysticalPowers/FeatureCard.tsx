@@ -75,7 +75,7 @@ export default function FeatureCard({ title, description, icon: Icon, variant, a
                         duration: 0.5,
                         delay: 0.2 + animationDelay,
                     }}>
-                    <Icon className={`shrink-0 ${variantStyles.icon} ~text-3xl/5xl`} />
+                    <Icon className={`${variantStyles.icon} ~text-3xl/5xl`} />
                 </motion.div>
             </div>
             <motion.p
