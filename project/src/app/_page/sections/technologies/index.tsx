@@ -39,7 +39,7 @@ export default function Technologies() {
             </motion.h2>
             <div className='mx-auto grid w-full max-w-[theme(screens.xs)] grid-cols-1 gap-3 sm:max-w-[theme(screens.sm)] sm:gap-4 md:max-w-[theme(screens.md)] md:grid-cols-2 lg:max-w-[theme(screens.lg)] lg:grid-cols-3 xl:max-w-[theme(screens.xl)] xl:grid-cols-4'>
                 {technologies.map((tech) => (
-                    <TechnologyCard key={tech.name} {...tech}/>
+                    <TechnologyCard key={tech.name} {...tech} />
                 ))}
             </div>
         </motion.section>

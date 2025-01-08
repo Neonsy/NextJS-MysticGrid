@@ -113,7 +113,7 @@ export default {
         'bg-tech-typescript',
         'border-tech-typescript',
         'text-tech-react',
-        'bg-tech-react', 
+        'bg-tech-react',
         'border-tech-react',
         'text-tech-nextjs',
         'bg-tech-nextjs',

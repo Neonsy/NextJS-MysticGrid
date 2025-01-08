@@ -47,7 +47,7 @@ export default function ModeCard({ title, description, ctaText, href, direction 
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             onViewportEnter={() => setIsInView(true)}
-            className={`${variantStyles.container}  ~px-6/32 ~py-16/32`}>
+            className={`${variantStyles.container} ~px-6/32 ~py-16/32`}>
             <div
                 className={`flex w-full flex-col items-center justify-center ~gap-8/16 lg:flex-row lg:~gap-32/64 ${
                     direction === 'rtl' ? 'lg:flex-row-reverse' : ''
@@ -60,7 +60,7 @@ export default function ModeCard({ title, description, ctaText, href, direction 
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.12, delay: 0.2 }}
-                    className=' text-center lg:text-left'>
+                    className='text-center lg:text-left'>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
