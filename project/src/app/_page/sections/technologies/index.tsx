@@ -20,7 +20,7 @@ export default function Technologies() {
     ];
 
     return (
-        <section className='backdrop-blur-sm flex flex-col items-center justify-center gap-6 bg-slate-950/75 px-8 py-16 sm:gap-8 sm:px-16 sm:py-24'>
+        <section className='flex flex-col items-center justify-center bg-slate-950/75 backdrop-blur-sm ~gap-6/16 ~px-8/16 ~py-16/32'>
             <h2 className='text-center font-bold ~text-3xl/4xl'>Arcane Technologies</h2>
             <div className='mx-auto grid w-full max-w-[theme(screens.xs)] grid-cols-1 gap-3 sm:max-w-[theme(screens.sm)] sm:gap-4 md:max-w-[theme(screens.md)] md:grid-cols-2 lg:max-w-[theme(screens.lg)] lg:grid-cols-3 xl:max-w-[theme(screens.xl)] xl:grid-cols-4'>
                 {technologies.map((tech) => (
