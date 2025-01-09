@@ -14,9 +14,9 @@ I create a PR targeting the Dev branch.
 From Dev to Preview:
 I periodically create PRs to the Preview branch.
 Code undergoes linting and formatting checks.
+This PR also creates a preview build and deploys it.
 
 From Preview to Main:
 After passing Quality Assurance (QA), I create a PR targeting Main.
-A preview build is generated and deployed.
 Upon successful testing, the PR is merged.
 A production build is automatically deployed.
