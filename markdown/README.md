@@ -4,8 +4,9 @@
 [![Deploy Preview](https://github.com/Neonsy/NextJS-MysticGrid/actions/workflows/deploy-preview.yml/badge.svg?branch=Preview)](https://github.com/Neonsy/NextJS-MysticGrid/actions/workflows/deploy-preview.yml)
 [![Deploy Production](https://github.com/Neonsy/NextJS-MysticGrid/actions/workflows/deploy-prod.yml/badge.svg)](https://github.com/Neonsy/NextJS-MysticGrid/actions/workflows/deploy-prod.yml)
 
-> [!NOTE]
-> This project is currently in the early stages of development and progress can be tracked [here](https://github.com/Neonsy/NextJS-MysticGrid/tree/Dev).
+# IMPORTANT INFO
+> [!IMPORTANT]  
+> This project is on hold, and will be reset and overhauled after the [Portfolio Page](https://github.com/neonsy/Astro-NeonSpace) is complete.
 
 ## Motivation 🎯
 
