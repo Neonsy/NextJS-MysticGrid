@@ -3,8 +3,6 @@ name: 'CodeQL Advanced'
 on:
     pull_request:
         branches: ['Dev', 'Preview', 'main']
-    schedule:
-        - cron: '0 6 * * 1' # Runs at (6 AM) on Monday
 
 jobs:
     analyze:
