@@ -1,4 +1,4 @@
-# [Explore the MysticGrid](https://nextjs-mysticgrid.vercel.app](https://mysticgrid.space/)
+# [Explore the MysticGrid](https://mysticgrid.space/)
 
 [![Main CI/CD](https://github.com/Neonsy/NextJS-MysticGrid/actions/workflows/main-ci-cd.yml/badge.svg)](https://github.com/Neonsy/NextJS-MysticGrid/actions/workflows/main-ci-cd.yml)
 [![Deploy Preview](https://github.com/Neonsy/NextJS-MysticGrid/actions/workflows/deploy-preview.yml/badge.svg?branch=Preview)](https://github.com/Neonsy/NextJS-MysticGrid/actions/workflows/deploy-preview.yml)
