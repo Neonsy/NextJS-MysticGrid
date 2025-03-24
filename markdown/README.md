@@ -7,7 +7,7 @@
 # IMPORTANT INFO
 > [!IMPORTANT]  
 > This project is on hold, and will be reset and overhauled after the [Portfolio Page](https://github.com/neonsy/Astro-NeonSpace) is complete.
-> Because of that, I've removed the vercel project for now. It'LL be re-created, as soon as I start working on it again.
+> Because of that, I've removed the vercel project for now. It'll be re-created, as soon as I start working on it again.
 
 ## Motivation 🎯
 
