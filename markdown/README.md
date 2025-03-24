@@ -1,4 +1,4 @@
-# [Explore the MysticGrid](https://nextjs-mysticgrid.vercel.app/)
+# [Explore the MysticGrid](https://nextjs-mysticgrid.vercel.app](https://mysticgrid.space/)
 
 [![Main CI/CD](https://github.com/Neonsy/NextJS-MysticGrid/actions/workflows/main-ci-cd.yml/badge.svg)](https://github.com/Neonsy/NextJS-MysticGrid/actions/workflows/main-ci-cd.yml)
 [![Deploy Preview](https://github.com/Neonsy/NextJS-MysticGrid/actions/workflows/deploy-preview.yml/badge.svg?branch=Preview)](https://github.com/Neonsy/NextJS-MysticGrid/actions/workflows/deploy-preview.yml)
@@ -7,6 +7,7 @@
 # IMPORTANT INFO
 > [!IMPORTANT]  
 > This project is on hold, and will be reset and overhauled after the [Portfolio Page](https://github.com/neonsy/Astro-NeonSpace) is complete.
+> Because of that, I've removed the vercel project for now. It'LL be re-created, as soon as I start working on it again.
 
 ## Motivation 🎯
 
@@ -40,7 +41,7 @@ This project isn't just about solving puzzles - it's about crafting an engaging 
 - [Clerk](https://clerk.com/)
 - [TanStack Query](https://tanstack.com/query)
 - [DrizzleORM](https://orm.drizzle.team/)
-- [Turso](https://turso.tech/)
+- [Convex](https://www.convex.dev)
 
 - [Posthog](https://posthog.com/)
 - [Sentry](https://sentry.io/)
